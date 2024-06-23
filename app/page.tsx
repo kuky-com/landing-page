@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, FormEvent, ChangeEvent, useRef } from 'react'
+import { useState, FormEvent, ChangeEvent } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../store'
 import { registerUser } from '../store/userSlice'
@@ -46,12 +46,12 @@ export default function Home() {
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         <h1 className="font-lexend text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-extrabold leading-[86px] tracking-[0.002em] text-center mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] mb-12">
-          <span className="block leading-[1.2em]">We're launching</span>
+          <span className="block leading-[1.2em]">We&apos;re launching</span>
           <span className="block leading-[1.2em] mt-[-0.1em]">soon, get ready</span>
         </h1>
 
         <p className="font-roboto text-base font-light leading-[26px] text-center text-[rgba(102,102,102,1)] max-w-3xl mx-auto mb-12">
-          Hold tight! Kuky is on its way to revolutionize how you meet and connect with people who share your interests. Whether it's finding a jogging buddy or a study partner, Kuky's got you covered.
+          Hold tight! Kuky is on its way to revolutionize how you meet and connect with people who share your interests. Whether it&apos;s finding a jogging buddy or a study partner, Kuky&apos;s got you covered.
         </p>
         <div className="w-full max-w-md mx-auto">
           <form onSubmit={handleSubmit} className="w-full">

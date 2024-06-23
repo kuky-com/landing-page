@@ -1,4 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    reactStrictMode: true,
+    async headers() {
+        return [
+            {
+                source: '/:path*',
+                headers: [
+                    {
+                        key: 'Referrer-Policy',
+                        value: 'origin',
+                    },
+                ],
+            },
+        ]
+    },
+}
 
-export default nextConfig;
+export default nextConfig

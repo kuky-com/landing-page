@@ -2,6 +2,7 @@ import "./globals.css";
 import { Providers } from './providers';
 import { Metadata } from 'next'
 import { Roboto, Inter } from "next/font/google";
+import Script from 'next/script'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700'],
@@ -27,6 +28,11 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Providers>
           {children}
+          <Script
+            src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+            strategy="afterInteractive"
+            referrerPolicy="origin"
+          />
         </Providers>
       </body>
     </html>

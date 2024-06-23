@@ -5,12 +5,16 @@ import { useState, FormEvent, ChangeEvent, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../store'
 import { registerUser } from '../store/userSlice'
-import ReCAPTCHA from "react-google-recaptcha";
+
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>()
   const { status, error } = useSelector((state: RootState) => state.user)
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -22,14 +26,15 @@ export default function Home() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const captchaValue = recaptchaRef.current?.getValue();
-    if (!captchaValue) {
-      alert("Please verify the reCAPTCHA!");
-      return;
+    try {
+      const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, { action: 'register' })
+      const dataToSend = { ...formData, recaptchaToken: token };
+      dispatch(registerUser(dataToSend));
+    } catch (error) {
+      console.error('reCAPTCHA error:', error)
     }
-    dispatch(registerUser({ ...formData }));
   }
 
   return (
@@ -40,7 +45,7 @@ export default function Home() {
       </header>
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
-        <h1 className="font-lexend text-[80px] font-extrabold leading-[86px] tracking-[0.002em] text-center mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] mb-12">
+        <h1 className="font-lexend text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-extrabold leading-[86px] tracking-[0.002em] text-center mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] mb-12">
           <span className="block leading-[1.2em]">We're launching</span>
           <span className="block leading-[1.2em] mt-[-0.1em]">soon, get ready</span>
         </h1>
@@ -89,12 +94,7 @@ export default function Home() {
               </button>
             </div>
             <div className="mb-4">
-              {/* Placeholder for reCAPTCHA */}
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-                theme="light"
-              />
+
             </div>
             {status === 'loading' && <p>Submitting...</p>}
             {status === 'failed' && <p className="text-red-500">{error}</p>}

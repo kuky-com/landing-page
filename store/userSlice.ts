@@ -1,10 +1,24 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 import { createUser } from '../services/api'
 
+interface CreateUserDto {
+    firstName: string;
+    lastName: string;
+    email: string;
+    recaptchaToken: string;
+}
+
+interface User {
+    id: number;
+    firstName: string;
+    lastName: string;
+    email: string;
+}
+
 interface UserState {
-    currentUser: any | null
-    status: 'idle' | 'loading' | 'succeeded' | 'failed'
-    error: string | null
+    currentUser: User | null;
+    status: 'idle' | 'loading' | 'succeeded' | 'failed';
+    error: string | null;
 }
 
 const initialState: UserState = {
@@ -13,14 +27,14 @@ const initialState: UserState = {
     error: null,
 }
 
-export const registerUser = createAsyncThunk(
+export const registerUser = createAsyncThunk<User, CreateUserDto, { rejectValue: string }>(
     'users/register',
-    async (userData: { firstName: string; lastName: string; email: string }, { rejectWithValue }) => {
+    async (userData: CreateUserDto, { rejectWithValue }) => {
         try {
             const response = await createUser(userData)
             return response.data
         } catch (error: any) {
-            return rejectWithValue(error.response.data)
+            return rejectWithValue(error.response?.data?.message || 'An error occurred')
         }
     }
 )
@@ -34,13 +48,13 @@ const userSlice = createSlice({
             .addCase(registerUser.pending, (state) => {
                 state.status = 'loading'
             })
-            .addCase(registerUser.fulfilled, (state, action: PayloadAction<any>) => {
+            .addCase(registerUser.fulfilled, (state, action: PayloadAction<User>) => {
                 state.status = 'succeeded'
                 state.currentUser = action.payload
             })
-            .addCase(registerUser.rejected, (state, action: PayloadAction<any>) => {
+            .addCase(registerUser.rejected, (state, action) => {
                 state.status = 'failed'
-                state.error = action.payload
+                state.error = action.payload || 'An error occurred'
             })
     },
 })

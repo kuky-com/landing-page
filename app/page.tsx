@@ -5,6 +5,9 @@ import { useState, FormEvent, ChangeEvent } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../store'
 import { registerUser } from '../store/userSlice'
+import VideoPopup from './VideoPopup';
+import ResponsiveBottomImage from './ResponsiveBottomImage';
+
 
 declare global {
   interface Window {
@@ -15,6 +18,7 @@ declare global {
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>()
   const { status, error } = useSelector((state: RootState) => state.user)
+  const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -40,8 +44,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAFAFA] flex flex-col">
       <header className="p-4 flex justify-between items-center">
-        <Image src="/kuky-icon.svg" alt="Kuky Icon" width={34} height={34} />
-        <Image src="/menu-icon.svg" alt="Menu Icon" width={114} height={34} />
+        <div className="flex items-center">
+          <Image src="/kuky-icon.svg" alt="Kuky Icon" width={34} height={34} />
+          <p className="ml-2 font-lexend text-[10px] font-bold leading-[12.5px] text-left text-black">
+            CONNECT,<br />CREATE & CELEBRATE
+          </p>
+        </div>
+        <div className="flex items-center">
+          <Image src="/notification-icon.svg" className="mr-6" alt="Notification Icon" width={24} height={24} />
+          <Image src="/menu-icon.svg" alt="Menu Icon" width={114} height={34} />
+        </div>
       </header>
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
@@ -104,7 +116,22 @@ export default function Home() {
         <p className="text-[#9b9b9b] text-sm text-center max-w-md mt-4">
           By submitting this form, you agree to our Privacy Policy, and allow Kuky to use this information for marketing purposes. We are committed to handling your personal data responsibly.
         </p>
+        <p className="text-sm text-center mt-12 text-[#666666]">
+          Want to learn more about Kuky? Watch <button onClick={() => setIsVideoOpen(true)} className=" underline">our video</button> 🕹️
+        </p>
+
+        <VideoPopup
+          isOpen={isVideoOpen}
+          onClose={() => setIsVideoOpen(false)}
+          videoId="KO7qhUSYHAM"
+        />
       </main>
+      <footer className="mt-auto">
+        <ResponsiveBottomImage
+          src="bottom-background.svg"
+          alt="Bottom image description"
+        />
+      </footer>
     </div>
   )
 }

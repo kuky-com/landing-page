@@ -1,12 +1,14 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, FormEvent, ChangeEvent } from 'react'
+import { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../store'
 import { registerUser } from '../store/userSlice'
-import VideoPopup from './VideoPopup';
-import ResponsiveBottomImage from './ResponsiveBottomImage';
+import VideoPopup from '../components/VideoPopup';
+import ResponsiveBottomImage from '../components/ResponsiveBottomImage';
+import PrivacyPolicyPopup from '../components/PrivacyPolicyPopup'
+import { useSearchParams } from 'next/navigation'
 
 
 declare global {
@@ -19,6 +21,22 @@ export default function Home() {
   const dispatch = useDispatch<AppDispatch>()
   const { status, error } = useSelector((state: RootState) => state.user)
   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false)
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const privacyPolicyParam = searchParams.get('privacy-policy')
+    if (privacyPolicyParam === 'true') {
+      setShowPrivacyPolicy(true)
+    } else {
+      setShowPrivacyPolicy(false)
+    }
+  }, [searchParams])
+
+  const handleClosePrivacyPolicy = () => {
+    setShowPrivacyPolicy(false)
+    window.history.pushState({}, '', '/')
+  }
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -132,6 +150,7 @@ export default function Home() {
           alt="Bottom image description"
         />
       </footer>
+      {showPrivacyPolicy && <PrivacyPolicyPopup onClose={handleClosePrivacyPolicy} />}
     </div>
   )
 }

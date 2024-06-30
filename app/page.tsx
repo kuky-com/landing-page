@@ -8,8 +8,7 @@ import { registerUser } from '../store/userSlice'
 import VideoPopup from '../components/VideoPopup';
 import ResponsiveBottomImage from '../components/ResponsiveBottomImage';
 import PrivacyPolicyPopup from '../components/PrivacyPolicyPopup'
-import { useSearchParams } from 'next/navigation'
-
+import Link from 'next/link';
 
 declare global {
   interface Window {
@@ -21,22 +20,7 @@ export default function Home() {
   const dispatch = useDispatch<AppDispatch>()
   const { status, error } = useSelector((state: RootState) => state.user)
   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
-  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false)
-  const searchParams = useSearchParams()
-
-  useEffect(() => {
-    const privacyPolicyParam = searchParams.get('privacy-policy')
-    if (privacyPolicyParam === 'true') {
-      setShowPrivacyPolicy(true)
-    } else {
-      setShowPrivacyPolicy(false)
-    }
-  }, [searchParams])
-
-  const handleClosePrivacyPolicy = () => {
-    setShowPrivacyPolicy(false)
-    window.history.pushState({}, '', '/')
-  }
+  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -132,7 +116,7 @@ export default function Home() {
           </form>
         </div>
         <p className="text-[#9b9b9b] text-sm text-center max-w-md mt-4">
-          By submitting this form, you agree to our Privacy Policy, and allow Kuky to use this information for marketing purposes. We are committed to handling your personal data responsibly.
+          By submitting this form, you agree to our <button onClick={() => setShowPrivacyPolicy(true)} className="text-bold underline">Privacy Policy</button>, and allow Kuky to use this information for marketing purposes. We are committed to handling your personal data responsibly.
         </p>
         <p className="text-sm text-center mt-12 text-[#666666]">
           Want to learn more about Kuky? Watch <button onClick={() => setIsVideoOpen(true)} className=" underline">our video</button> 🕹️
@@ -150,7 +134,9 @@ export default function Home() {
           alt="Bottom image description"
         />
       </footer>
-      {showPrivacyPolicy && <PrivacyPolicyPopup onClose={handleClosePrivacyPolicy} />}
+      {showPrivacyPolicy && (
+        <PrivacyPolicyPopup onClose={() => setShowPrivacyPolicy(false)} />
+      )}
     </div>
   )
 }

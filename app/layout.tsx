@@ -3,6 +3,7 @@ import { Providers } from './providers';
 import { Metadata } from 'next'
 import { Roboto, Inter } from "next/font/google";
 import Script from 'next/script'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700'],
@@ -24,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className={roboto.className}>
         <Providers>
           {children}

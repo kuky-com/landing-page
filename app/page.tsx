@@ -8,7 +8,6 @@ import { registerUser } from '../store/userSlice'
 import VideoPopup from '../components/VideoPopup';
 import ResponsiveBottomImage from '../components/ResponsiveBottomImage';
 import PrivacyPolicyPopup from '../components/PrivacyPolicyPopup'
-import Link from 'next/link';
 
 declare global {
   interface Window {
@@ -36,7 +35,7 @@ export default function Home() {
     e.preventDefault()
     try {
       const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, { action: 'register' })
-      const dataToSend = { ...formData, recaptchaToken: token };
+      const dataToSend = { ...formData, email: formData.email.trim().toLowerCase(), recaptchaToken: token };
       dispatch(registerUser(dataToSend));
     } catch (error) {
       console.error('reCAPTCHA error:', error)
@@ -125,7 +124,7 @@ export default function Home() {
         <VideoPopup
           isOpen={isVideoOpen}
           onClose={() => setIsVideoOpen(false)}
-          videoId="KO7qhUSYHAM"
+          videoId="nHLBjJcFMq0"
         />
       </main>
       <footer className="mt-auto">

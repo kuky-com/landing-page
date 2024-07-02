@@ -5,6 +5,8 @@ import { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../store'
 import { registerUser } from '../store/userSlice'
+
+import Header from '../components/Header'
 import VideoPopup from '../components/VideoPopup';
 import ResponsiveBottomImage from '../components/ResponsiveBottomImage';
 import PrivacyPolicyPopup from '../components/PrivacyPolicyPopup'
@@ -44,18 +46,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] flex flex-col">
-      <header className="p-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <Image src="/kuky-icon.svg" alt="Kuky Icon" width={34} height={34} />
-          <p className="ml-2 font-lexend text-[10px] font-bold leading-[12.5px] text-left text-black">
-            CONNECT,<br />CREATE & CELEBRATE
-          </p>
-        </div>
-        <div className="flex items-center">
-          <Image src="/notification-icon.svg" className="mr-6" alt="Notification Icon" width={24} height={24} />
-          <Image src="/menu-icon.svg" alt="Menu Icon" width={114} height={34} />
-        </div>
-      </header>
+
+      <Header />
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         <h1 className="font-lexend text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-extrabold leading-[86px] tracking-[0.002em] text-center mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] mb-12">
@@ -129,13 +121,15 @@ export default function Home() {
       </main>
       <footer className="mt-auto">
         <ResponsiveBottomImage
-          src="bottom-background.svg"
+          src="/bottom-background.png"
           alt="Bottom image description"
         />
       </footer>
-      {showPrivacyPolicy && (
-        <PrivacyPolicyPopup onClose={() => setShowPrivacyPolicy(false)} />
-      )}
-    </div>
+      {
+        showPrivacyPolicy && (
+          <PrivacyPolicyPopup onClose={() => setShowPrivacyPolicy(false)} />
+        )
+      }
+    </div >
   )
 }

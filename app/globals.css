@@ -48,3 +48,18 @@ body {
       scrollbar-width: none;  /* Firefox */
   }
 }
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(0deg); }
+  50% { transform: rotate(-10deg); }
+  60% { transform: rotate(-5deg); }
+  70% { transform: rotate(0deg); }
+  80% { transform: rotate(5deg); }
+  90% { transform: rotate(10deg); }
+  100% { transform: rotate(5deg); }
+}
+
+.wiggle-animation {
+  animation: wiggle 1s ease-in-out infinite;
+}

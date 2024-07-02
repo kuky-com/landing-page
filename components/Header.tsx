@@ -37,9 +37,9 @@ const Header: React.FC = () => {
             <div className="flex items-center relative">
                 <div className="wiggle-animation mr-6 relative">
                     <Image src="/notification-icon.svg" alt="Notification Icon" width={24} height={24} />
-                    <div className="absolute -bottom-12 left-3 transform -translate-x-1/2">
-                        <Image src="/notification-cloud.svg" alt="Notification Cloud" width={133} height={41} />
-                    </div>
+                </div>
+                <div className="absolute -bottom-12 left-3 transform -translate-x-1/2">
+                    <Image src="/notification-cloud.svg" alt="Notification Cloud" width={133} height={41} />
                 </div>
                 <div className="relative">
                     <Image src="/star-button.png" alt="Star Button" width={120} height={32} />

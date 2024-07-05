@@ -10,6 +10,7 @@ import Header from '../components/Header'
 import VideoPopup from '../components/VideoPopup';
 import ResponsiveBottomImage from '../components/ResponsiveBottomImage';
 import PrivacyPolicyPopup from '../components/PrivacyPolicyPopup'
+import FAQ from '../components/FAQ'
 
 declare global {
   interface Window {
@@ -118,6 +119,7 @@ export default function Home() {
           onClose={() => setIsVideoOpen(false)}
           videoId="nHLBjJcFMq0"
         />
+        <FAQ />
       </main>
       <footer className="mt-auto">
         <ResponsiveBottomImage

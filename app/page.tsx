@@ -117,7 +117,7 @@ export default function Home() {
         <VideoPopup
           isOpen={isVideoOpen}
           onClose={() => setIsVideoOpen(false)}
-          videoId="nHLBjJcFMq0"
+          videoId="Ie4G3c1Ag9M"
         />
         <FAQ />
       </main>

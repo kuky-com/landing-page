@@ -32,7 +32,7 @@ const Header: React.FC = () => {
             <div className="flex items-center">
                 <Image src="/kuky-icon.svg" alt="Kuky Icon" width={34} height={34} />
                 <p className="ml-2 font-lexend text-[10px] font-bold leading-[12.5px] text-left text-black">
-                    THE PERFECT,<br />MATCH, FASTER
+                    MEET YOUR <br />PERFECT MATCH, FASTER
                 </p>
             </div>
             <div className="flex items-center relative">

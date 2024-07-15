@@ -36,24 +36,16 @@ const Header: React.FC = () => {
                 </p>
             </div>
             <div className="flex items-center relative">
-                <div className="wiggle-animation mr-6 relative">
+                <div className="wiggle-animation mr-8 relative">
                     <Image src="/notification-icon.svg" alt="Notification Icon" width={24} height={24} />
                 </div>
-                <div className="absolute -bottom-14 left-3 transform -translate-x-1/2">
+                <div className="absolute -bottom-14 transform -translate-x-3/4">
                     <div className="inline-block relative">
                         <div className="bg-white text-gray-800 px-4 py-2 rounded-md shadow-lg z-10 border border-gray-200">
                             <span className="text-sm font-medium whitespace-nowrap font-normal text-[#666666]">Sign up to get 3 months free access</span>
-                            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border border-gray-100"></div>
+                            <div className="absolute -top-2 left-3/4 transform -translate-x1/8 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border border-gray-100"></div>
                         </div>
                     </div>
-                </div>
-                <div className="relative">
-                    <Link href="https://github.com/kuky-com/landing-page" target="_blank" rel="noopener noreferrer">
-                        <Image src="/star-button.png" alt="Star Button" width={120} height={32} />
-                        <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black text-sm font-bold">
-                            {starCount}
-                        </span>
-                    </Link>
                 </div>
             </div>
         </header >

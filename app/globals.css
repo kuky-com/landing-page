@@ -63,3 +63,21 @@ body {
 .wiggle-animation {
   animation: wiggle 1s ease-in-out infinite;
 }
+.animation {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background: linear-gradient(to right, #e8c926, #fd7900, #f65a1d, #3855d9, #f7cc41, #f85e21, #3956da, #f7cc41);
+  animation: wave 2s ease-in-out forwards;
+  background-size: 500% 100%;
+  background-position-x: left;
+  background-clip: text;
+}
+@keyframes wave {
+  0% {
+    background-position-x: right;
+  }
+  100% {
+    background-position-x: left;
+  }
+}

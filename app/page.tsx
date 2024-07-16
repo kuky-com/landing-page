@@ -55,7 +55,7 @@ export default function Home() {
           <span className="mb-2 sm:mb-0 block leading-[1.2em]">Talk to Kuky,</span>
           <span className="block leading-[1.2em] mt-[-0.1em]">find your match</span>
         </h1>
-        <h3 className="font-lexend text-2xl sm:text-3xl md:text-2xl lg:text-[40px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for private beta access</span></h3>
+        <h3 className="font-lexend text-2xl sm:text-3xl md:text-2xl lg:text-[40px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for your AI agent access</span></h3>
         <p className="text-sm text-center mt-0 text-[#666666] mb-6">
           Want to learn more about Kuky? Watch <button onClick={() => setIsVideoOpen(true)} className=" underline">our video</button> ▶️
         </p>

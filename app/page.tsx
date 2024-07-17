@@ -57,9 +57,19 @@ export default function Home() {
         </h1>
         <h3 className="font-lexend text-2xl sm:text-3xl md:text-2xl lg:text-[40px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for your AI agent access</span></h3>
         <p className="text-sm text-center mt-0 text-[#666666] mb-6">
-          Want to learn more about Kuky? Watch <button onClick={() => setIsVideoOpen(true)} className=" underline">our video</button> ▶️
+          Want to learn more about Kuky? Watch our video ▶️
         </p>
-        
+        <div className="w-full max-w-4xl mx-auto mb-8">
+          <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/Ie4G3c1Ag9M"
+              title="Kuky Video"
+              className="absolute top-0 left-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
         <p className="font-roboto text-base font-light leading-[26px] text-center text-[rgba(102,102,102,1)] max-w-3xl mx-auto mb-16 sm:mb-12 px-6 sm:px-4">
           Hold tight! Kuky is on its way to revolutionize how you meet and connect with people who share your interests. Whether it&apos;s finding a jogging buddy or a study partner, Kuky&apos;s got you covered.
         </p>
@@ -114,7 +124,7 @@ export default function Home() {
         <p className="text-[#9b9b9b] text-sm text-center max-w-md mt-4">
           By submitting this form, you agree to our <button onClick={() => setShowPrivacyPolicy(true)} className="text-bold underline">Privacy Policy</button>, and allow Kuky to use this information for marketing purposes. We are committed to handling your personal data responsibly.
         </p>
-        
+
 
         <VideoPopup
           isOpen={isVideoOpen}

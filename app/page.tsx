@@ -66,13 +66,11 @@ export default function Home() {
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         <h1 className="font-lexend text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0">
-          <span className="mb-2 sm:mb-0 block leading-[1.2em]">Talk to Kuky,</span>
-          <span className="animation block leading-[1.2em] mt-[-0.1em]">find your match</span>
+          <span className="animation mb-2 sm:mb-0 block leading-[1.2em]">Find Support</span>
+          <span className=" block leading-[1.2em] mt-[-0.1em]">Through Shared Experiences</span>
         </h1>
         <h3 className="font-lexend text-2xl sm:text-3xl md:text-2xl lg:text-[40px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for your AI agent access</span></h3>
-        <p className="text-sm text-center mt-0 text-[#666666] mb-6">
-          Want to learn more about Kuky? Watch our video ▶️
-        </p>
+
         <div className="w-full max-w-4xl mx-auto mb-8">
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
             <iframe

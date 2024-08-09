@@ -5,6 +5,7 @@ import { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../store'
 import { registerUser } from '../store/userSlice'
+import { usePathname, useRouter } from 'next/navigation'
 
 import Header from '../components/Header'
 import VideoPopup from '../components/VideoPopup';
@@ -20,6 +21,9 @@ declare global {
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>()
+  const router = useRouter()
+  const pathname = usePathname()
+
   const { status, error } = useSelector((state: RootState) => state.user)
   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
@@ -28,7 +32,17 @@ export default function Home() {
     firstName: '',
     lastName: '',
     email: '',
+    routeName: ''
   })
+
+  useEffect(() => {
+    const storedRouteName = localStorage.getItem('routeName')
+    if (storedRouteName) {
+      setFormData(prev => ({ ...prev, routeName: storedRouteName }))
+      localStorage.removeItem('routeName')
+    }
+  }, [])
+
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })

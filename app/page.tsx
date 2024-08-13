@@ -69,7 +69,7 @@ export default function Home() {
           <span className="animation mb-2 sm:mb-0 block leading-[1.2em]">Find Support</span>
           <span className=" block leading-[1.2em] mt-[-0.1em]">Through Shared Experiences</span>
         </h1>
-        <h3 className="font-lexend text-2xl sm:text-3xl md:text-2xl lg:text-[40px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for your AI agent access</span></h3>
+        <h3 className="font-lexend text-2xl sm:text-3xl md:text-2xl lg:text-[40px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for your agent access</span></h3>
 
         <div className="w-full max-w-4xl mx-auto mb-8">
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">

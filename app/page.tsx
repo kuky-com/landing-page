@@ -86,7 +86,7 @@ export default function Home() {
           Hold tight! Kuky is on its way to revolutionize how you meet and connect with people who share your interests. Whether it&apos;s finding a jogging buddy or a study partner, Kuky&apos;s got you covered.
         </p>
         <div className="w-full max-w-md mx-auto">
-          <h3 className="font-lexend text-xl sm:text-xl md:text-xl lg:text-[35] font-extrabold leading-[1.1em] sm:leading-[56px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for early access</span></h3>
+          <h3 className="font-lexend text-xl sm:text-xl md:text-xl lg:text-[35] font-extrabold leading-[1.1em] sm:leading-[56px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for 3 months FREE access</span></h3>
           <form onSubmit={handleSubmit} className="w-full">
             <div className="grid grid-cols-2 gap-4 mb-4">
               <input

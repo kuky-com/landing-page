@@ -14,7 +14,7 @@ const roboto = Roboto({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Kuky - Coming Soon',
+  title: 'Kuky - connection through shared experiences',
   description: 'Get ready for Kuky!',
 }
 

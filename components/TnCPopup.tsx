@@ -23,7 +23,7 @@ const TnCPopup: React.FC<TnCPopupProps> = ({ onClose }) => {
                         <h2 className="text-4xl text-black font-bold mb-4">Terms and Conditions</h2>
 
                         <p className="text-[#686868] mb-4 font-roboto text-base font-light leading-[18.75px] text-left">
-                            Welcome to Kuky! These Terms and Conditions ("Terms") govern your use of the Kuky application ("App") and any related services provided by Kuky ("we", "us", "our"). By accessing or using the App, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use the App.
+                            Welcome to Kuky! These Terms and Conditions (Terms) govern your use of the Kuky application (App) and any related services provided by Kuky (we, us, our). By accessing or using the App, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use the App.
                         </p>
 
                         <h3 className="text-[#686868] font-roboto text-base font-medium leading-[18.75px] text-left mb-2">1. Acceptance of Terms</h3>
@@ -47,7 +47,7 @@ const TnCPopup: React.FC<TnCPopupProps> = ({ onClose }) => {
                             <strong>Prohibited Activities:</strong> You agree not to:
                             <ul className="list-disc list-inside">
                                 <li>Use the App for any unlawful or unauthorized purpose.</li>
-                                <li>Upload, post, or share any content that is defamatory, obscene, or infringes on others' rights.</li>
+                                <li>Upload, post, or share any content that is defamatory, obscene, or infringes on others rights.</li>
                                 <li>Attempt to interfere with the operation of the App or gain unauthorized access to our systems.</li>
                             </ul>
                         </p>
@@ -79,7 +79,7 @@ const TnCPopup: React.FC<TnCPopupProps> = ({ onClose }) => {
 
                         <h3 className="text-[#686868] font-roboto text-base font-medium leading-[18.75px] text-left mb-2">7. Limitation of Liability</h3>
                         <p className="text-[#686868] mb-4 font-roboto text-base font-light leading-[18.75px] text-left">
-                            <strong>No Warranties:</strong> The App is provided "as is" without any warranties, express or implied. We do not guarantee that the App will be error-free or uninterrupted.
+                            <strong>No Warranties:</strong> The App is provided as is without any warranties, express or implied. We do not guarantee that the App will be error-free or uninterrupted.
                         </p>
                         <p className="text-[#686868] mb-4 font-roboto text-base font-light leading-[18.75px] text-left">
                             <strong>Liability Cap:</strong> To the maximum extent permitted by law, our liability for any claim arising from your use of the App is limited to the amount you paid us, if any, for access to the App.

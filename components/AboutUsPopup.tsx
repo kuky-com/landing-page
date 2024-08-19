@@ -27,15 +27,15 @@ const AboutUsPopup: React.FC<AboutUsPopupProps> = ({ onClose }) => {
                         </p>
 
                         <p className="text-[#686868] mb-4 font-roboto text-base font-light leading-[18.75px] text-left">
-                            At Kuky, we believe that the best connections come from shared experiences. Whether you're looking for someone to run with, study with, or simply share your hobbies with, Kuky is here to help you find that perfect match. Our AI-powered app analyzes your video profiles to match you with others who share your passions, making it easier than ever to meet like-minded people.
+                            At Kuky, we believe that the best connections come from shared experiences. Whether your are looking for someone to run with, study with, or simply share your hobbies with, Kuky is here to help you find that perfect match. Our AI-powered app analyzes your video profiles to match you with others who share your passions, making it easier than ever to meet like-minded people.
                         </p>
 
                         <p className="text-[#686868] mb-4 font-roboto text-base font-light leading-[18.75px] text-left">
-                            We're committed to your privacy and security. That's why we've built Kuky with robust privacy controls, ensuring that your personal information and private videos are protected at all times. Our goal is to create a safe and supportive community where you can confidently explore new connections.
+                            We are committed to your privacy and security. That is why we have built Kuky with robust privacy controls, ensuring that your personal information and private videos are protected at all times. Our goal is to create a safe and supportive community where you can confidently explore new connections.
                         </p>
 
                         <p className="text-[#686868] mb-4 font-roboto text-base font-light leading-[18.75px] text-left">
-                            Thank you for choosing Kuky. We look forward to helping you connect, share, and grow with others who share your interests. Together, let's make every connection count.
+                            Thank you for choosing Kuky. We look forward to helping you connect, share, and grow with others who share your interests. Together, lets make every connection count.
                         </p>
 
                     </div>

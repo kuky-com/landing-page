@@ -62,7 +62,7 @@ const PrivacyPolicyPopup: React.FC<PrivacyPolicyPopupProps> = ({ onClose }) => {
                         </p>
                         <h3 className="text-[#686868] font-roboto text-base font-medium leading-[18.75px] text-left mb-2">Contact Us</h3>
                         <p className="text-[#686868] mb-4 font-roboto text-base font-light leading-[18.75px] text-left">
-                            If you have questions, concerns, or wish to access or correct your personal information, please contact our Privacy Officer at: hello (at) qwerki (dot) com. Our Privacy Officer will respond to your inquiries promptly and assist you with any privacy-related matters.
+                            If you have questions, concerns, or wish to access or correct your personal information, please contact our Privacy Officer at: hello (at) kuky (dot) com. Our Privacy Officer will respond to your inquiries promptly and assist you with any privacy-related matters.
                         </p>
                     </div>
 

@@ -11,6 +11,8 @@ import Header from '../components/Header'
 import VideoPopup from '../components/VideoPopup';
 import ResponsiveBottomImage from '../components/ResponsiveBottomImage';
 import PrivacyPolicyPopup from '../components/PrivacyPolicyPopup'
+import AboutUsPopup from '../components/AboutUsPopup'
+import TnCPopup from '../components/TnCPopup'
 import FAQ from '../components/FAQ'
 
 declare global {
@@ -27,6 +29,8 @@ export default function Home() {
   const { status, error } = useSelector((state: RootState) => state.user)
   const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+  const [showTnC, setShowTnC] = useState(false);
+  const [showAboutUs, setShowAboutUs] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -62,7 +66,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAFAFA] flex flex-col">
 
-      <Header />
+      <Header setVideoOpen={() => setIsVideoOpen(true)}/>
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         <h1 className="font-lexend text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0">
@@ -74,7 +78,7 @@ export default function Home() {
         <div className="w-full max-w-4xl mx-auto mb-8">
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
             <iframe
-              src="https://youtube.com/embed/YVZUwdbTJUE"
+              src="https://www.youtube.com/embed/IfSL0zjSdSg"
               title="Kuky Video"
               className="absolute top-0 left-0 w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -142,11 +146,20 @@ export default function Home() {
         <VideoPopup
           isOpen={isVideoOpen}
           onClose={() => setIsVideoOpen(false)}
-          videoId="YVZUwdbTJUE"
+          videoId="IfSL0zjSdSg"
         />
         <FAQ />
+
+
       </main>
       <footer className="mt-auto">
+        <div className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 ">
+          <div className="text-[#9b9b9b] text-sm text-center max-w-md mt-4">
+            <button onClick={() => setShowAboutUs(true)} className="underline">About us</button><span> | </span>
+            <button onClick={() => setShowTnC(true)} className="underline">Terms & Conditions</button><span> | </span>
+            <button onClick={() => setShowPrivacyPolicy(true)} className="underline">Privacy Policy</button>
+          </div>
+        </div>
         <ResponsiveBottomImage
           src="/bottom-background.png"
           alt="Bottom image description"
@@ -155,6 +168,16 @@ export default function Home() {
       {
         showPrivacyPolicy && (
           <PrivacyPolicyPopup onClose={() => setShowPrivacyPolicy(false)} />
+        )
+      }
+      {
+        showTnC && (
+          <TnCPopup onClose={() => setShowTnC(false)} />
+        )
+      }
+      {
+        showAboutUs && (
+          <AboutUsPopup onClose={() => setShowAboutUs(false)} />
         )
       }
     </div >

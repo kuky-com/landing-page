@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import Link from 'next/link';
-
-const Header: React.FC = () => {
+interface HeaderVideoPopupProps {
+    setVideoOpen: () => void;
+}
+const Header: React.FC<HeaderVideoPopupProps> = ({setVideoOpen}) => {
     const [starCount, setStarCount] = useState<string>('');
 
     useEffect(() => {
@@ -36,17 +38,22 @@ const Header: React.FC = () => {
                 </p>
             </div>
             <div className="flex items-center relative">
-                <div className="wiggle-animation mr-8 relative">
-                    <Image src="/notification-icon.svg" alt="Notification Icon" width={24} height={24} />
-                </div>
-                <div className="absolute -bottom-14 transform -translate-x-3/4">
-                    <div className="inline-block relative">
-                        <div className="bg-white text-gray-800 px-4 py-2 rounded-md shadow-lg z-10 border border-gray-200">
-                            <span className="text-sm font-medium whitespace-nowrap font-normal text-[#666666]">Sign up to get 3 months free access</span>
-                            <div className="absolute -top-2 left-3/4 transform -translate-x1/8 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border border-gray-100"></div>
+                <button
+                    onClick={setVideoOpen}
+                >
+                    <div className="wiggle-animation mr-8 relative">
+                        <Image src="/notification-icon.svg" alt="Notification Icon" width={24} height={24} />
+                    </div>
+                    <div className="absolute -bottom-14 transform -translate-x-3/4">
+                        <div className="inline-block relative">
+                            <div className="bg-white text-gray-800 px-4 py-2 rounded-md shadow-lg z-10 border border-gray-200">
+                                <span className="text-sm font-medium whitespace-nowrap font-normal text-[#666666]">Pair with your Kuky Buddy & Win $500</span>
+                                <div className="absolute -top-2 left-3/4 transform -translate-x1/8 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border border-gray-100"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </button>
+
             </div>
         </header >
     )

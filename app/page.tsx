@@ -78,7 +78,7 @@ export default function Home() {
         <div className="w-full max-w-4xl mx-auto mb-8">
           <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
             <iframe
-              src="https://www.youtube.com/embed/IfSL0zjSdSg"
+              src="https://www.youtube.com/embed/YVZUwdbTJUE"
               title="Kuky Video"
               className="absolute top-0 left-0 w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -146,7 +146,7 @@ export default function Home() {
         <VideoPopup
           isOpen={isVideoOpen}
           onClose={() => setIsVideoOpen(false)}
-          videoId="IfSL0zjSdSg"
+          videoId="YVZUwdbTJUE"
         />
         <FAQ />
 

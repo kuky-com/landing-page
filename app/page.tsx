@@ -8,12 +8,13 @@ import { registerUser } from '../store/userSlice'
 import { usePathname, useRouter } from 'next/navigation'
 
 import Header from '../components/Header'
-import VideoPopup from '../components/VideoPopup';
-import ResponsiveBottomImage from '../components/ResponsiveBottomImage';
+import VideoPopup from '../components/VideoPopup'
+import ResponsiveBottomImage from '../components/ResponsiveBottomImage'
 import PrivacyPolicyPopup from '../components/PrivacyPolicyPopup'
 import AboutUsPopup from '../components/AboutUsPopup'
 import TnCPopup from '../components/TnCPopup'
 import FAQ from '../components/FAQ'
+import CustomDropdown from '../components/CustomDropdown'
 
 declare global {
   interface Window {
@@ -36,8 +37,16 @@ export default function Home() {
     firstName: '',
     lastName: '',
     email: '',
+    goal: '',
     routeName: ''
   })
+
+  const goals = [
+    { value: "ultra_cycle_touring", label: "Ultra long distance Cycle touring" },
+    { value: "fitness", label: "Fitness" },
+    { value: "learn_guitar", label: "Learn guitar" },
+    { value: "run_marathon", label: "Run a marathon" }
+  ];
 
   useEffect(() => {
     const storedRouteName = localStorage.getItem('routeName')
@@ -47,8 +56,11 @@ export default function Home() {
     }
   }, [])
 
+  const handleDropdownChange = (value: string) => {
+    setFormData({ ...formData, goal: value })
+  }
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -66,7 +78,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAFAFA] flex flex-col">
 
-      <Header setVideoOpen={() => setIsVideoOpen(true)}/>
+      <Header setVideoOpen={() => setIsVideoOpen(true)} />
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         <h1 className="font-lexend text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-extrabold leading-[1.1em] sm:leading-[86px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0">
@@ -129,6 +141,14 @@ export default function Home() {
               >
                 <Image src="/submit-icon.svg" alt="Submit" width={40} height={38} />
               </button>
+            </div>
+            <div className="mb-4">
+              <CustomDropdown
+                options={goals}
+                value={formData.goal}
+                onChange={handleDropdownChange}
+                placeholder="What goal are you looking to achieve?"
+              />
             </div>
             <div className="mb-4">
 

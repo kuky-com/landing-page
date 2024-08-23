@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
 
 interface Option {
     value: string;
@@ -27,8 +27,7 @@ const CustomDropdown = ({ options, value, onChange, placeholder }: CustomDropdow
     return (
         <div className="relative">
             <button
-                className={`w-full px-5 py-4 text-left border border-white rounded-lg shadow-inset-custom text-base font-roboto font-light leading-6 text-[rgba(102,102,102,1)] bg-white ${!value && 'text-[rgba(170,170,170,1)]' // Light gray for placeholder text
-                    }`}
+                className={`w-full px-5 py-4 text-left border border-white rounded-lg shadow-inset-custom text-base font-roboto font-light leading-6 text-[rgba(102,102,102,1)] bg-white ${!value && 'text-[rgba(170,170,170,1)]'}`}
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
             >
@@ -43,7 +42,7 @@ const CustomDropdown = ({ options, value, onChange, placeholder }: CustomDropdow
                 </span>
             </button>
             {isOpen && (
-                <ul className="absolute w-full bg-white border border-white mt-1 rounded-lg shadow-lg z-10">
+                <ul className="absolute w-full bg-white border border-white mt-1 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto">
                     {options.map((option) => (
                         <li
                             key={option.value}

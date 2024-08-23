@@ -42,10 +42,26 @@ export default function Home() {
   })
 
   const goals = [
-    { value: "ultra_cycle_touring", label: "Ultra long distance Cycle touring" },
+    { value: "well_balanced_and_consistence", label: "Well balanced and consistence" },
+    { value: "lose_belly_fat_and_build_muscle", label: "Lose belly fat and build muscle" },
+    { value: "take_a_t_break", label: "Take a T break" },
+    { value: "making_a_film_project", label: "Making a film project" },
+    { value: "quit_pornography", label: "Quit pornography" },
+    { value: "im_not_sure", label: "I'm not sure" },
+    { value: "i_am_trying_to_quit_being_depressed_all_the_time", label: "I am trying to quit being depressed all the time" },
+    { value: "the_creation_of_a_social_media_platform_to_connect_people", label: "The creation of a social media platform to connect people" },
+    { value: "quitting_smoking", label: "Quitting smoking" },
+    { value: "learning_to_talk_to_other_people_without_social_anxiety", label: "Learning to talk to other people without social anxiety" },
+    { value: "to_lose_50_pounds", label: "To lose 50 pounds" },
+    { value: "to_connect_with_people", label: "To connect with people" },
+    { value: "gym", label: "Gym" },
+    { value: "friendships_for_growth", label: "Friendships for growth" },
+    { value: "health", label: "Health" },
+    { value: "learning_yoga", label: "Learning yoga" },
+    { value: "ultra_long_distance_cycle_touring", label: "Ultra long-distance cycle touring" },
     { value: "fitness", label: "Fitness" },
     { value: "learn_guitar", label: "Learn guitar" },
-    { value: "run_marathon", label: "Run a marathon" }
+    { value: "run_a_marathon", label: "Run a marathon" }
   ];
 
   useEffect(() => {

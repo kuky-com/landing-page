@@ -127,7 +127,7 @@ export default function Home() {
                 name="goal"
                 value={formData.goal}
                 onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
-                placeholder="What goal are you looking to achieve?"
+                placeholder="What goal they would like to achieve with a Kuky buddy?"
                 className="w-full px-5 py-4 text-left border border-white rounded-lg shadow-inset-custom text-base font-roboto font-light leading-6 text-[rgba(102,102,102,1)] bg-white"
                 required
               />

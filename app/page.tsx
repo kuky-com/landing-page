@@ -121,11 +121,15 @@ export default function Home() {
           <h3 className="font-lexend text-xl sm:text-xl md:text-xl lg:text-[35] font-extrabold leading-[1.1em] sm:leading-[56px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for 3 months FREE access</span></h3>
           <form onSubmit={handleSubmit} className="w-full">
             <div className="mb-4">
-              <CustomDropdown
-                options={goals}
+
+              <input
+                type="text"
+                name="goal"
                 value={formData.goal}
-                onChange={handleDropdownChange}
+                onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
                 placeholder="What goal are you looking to achieve?"
+                className="w-full px-5 py-4 text-left border border-white rounded-lg shadow-inset-custom text-base font-roboto font-light leading-6 text-[rgba(102,102,102,1)] bg-white"
+                required
               />
             </div>
             <div className="grid grid-cols-2 gap-4 mb-4">
@@ -168,6 +172,9 @@ export default function Home() {
             </div>
             
             <div className="mb-4">
+
+
+            </div>
             {status === 'loading' && <p>Submitting...</p>}
             {status === 'failed' && <p className="text-red-500">{error}</p>}
             {status === 'succeeded' && <p className="text-green-500">Registration successful!</p>}

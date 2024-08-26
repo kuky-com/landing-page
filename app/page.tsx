@@ -121,6 +121,7 @@ export default function Home() {
           <h3 className="font-lexend text-xl sm:text-xl md:text-xl lg:text-[35] font-extrabold leading-[1.1em] sm:leading-[56px] tracking-[0.002em] text-center mb-6 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#686868] via-[#686868] to-[#202020] px-4 sm:px-0"><span className="mb-2 sm:mb-0 block leading-[1.2em]">Sign up for 3 months FREE access</span></h3>
           <form onSubmit={handleSubmit} className="w-full">
             <div className="mb-4">
+
               <input
                 type="text"
                 name="goal"
@@ -169,12 +170,16 @@ export default function Home() {
                 <Image src="/submit-icon.svg" alt="Submit" width={40} height={38} />
               </button>
             </div>
+            
             <div className="mb-4">
+
 
             </div>
             {status === 'loading' && <p>Submitting...</p>}
             {status === 'failed' && <p className="text-red-500">{error}</p>}
             {status === 'succeeded' && <p className="text-green-500">Registration successful!</p>}
+            </div>
+            
           </form>
         </div>
         <p className="text-[#9b9b9b] text-sm text-center max-w-md mt-4">

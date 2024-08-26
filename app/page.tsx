@@ -173,8 +173,6 @@ export default function Home() {
             
             <div className="mb-4">
 
-
-            </div>
             {status === 'loading' && <p>Submitting...</p>}
             {status === 'failed' && <p className="text-red-500">{error}</p>}
             {status === 'succeeded' && <p className="text-green-500">Registration successful!</p>}

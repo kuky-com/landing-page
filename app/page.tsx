@@ -49,7 +49,7 @@ export default function Home() {
       localStorage.removeItem('routeName')
     }
     if(status=='succeeded') setIsFormSubmitted(true)
-  }, [])
+  }, [status])
 
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

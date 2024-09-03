@@ -48,11 +48,9 @@ export default function Home() {
       setFormData(prev => ({ ...prev, routeName: storedRouteName }))
       localStorage.removeItem('routeName')
     }
+    if(status=='succeeded') setIsFormSubmitted(true)
   }, [])
 
-  const handleDropdownChange = (value: string) => {
-    setFormData({ ...formData, goal: value })
-  }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -63,7 +61,6 @@ export default function Home() {
     try {
       const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, { action: 'register' })
       const dataToSend = { ...formData, email: formData.email.trim().toLowerCase(), recaptchaToken: token };
-      setIsFormSubmitted(true)
       dispatch(registerUser(dataToSend));
     } catch (error) {
       console.error('reCAPTCHA error:', error)

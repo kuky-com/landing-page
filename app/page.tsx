@@ -197,7 +197,7 @@ export default function Home() {
             {/* YouTube */}
             <Link className="flex justify-center" href="https://www.youtube.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <Image
-                src="/icons/youtube.svg"
+                src="youtube.svg"
                 alt="YouTube"
                 width={24}
                 height={24}
@@ -207,7 +207,7 @@ export default function Home() {
             {/* Twitter */}
             <Link className="flex justify-center" href="https://twitter.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <Image
-                src="/icons/twitter.svg"
+                src="twitter.svg"
                 alt="Twitter"
                 width={24}
                 height={24}
@@ -217,7 +217,7 @@ export default function Home() {
             {/* Instagram */}
             <Link className="flex justify-center" href="https://www.instagram.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <Image
-                src="/icons/instagram.svg"
+                src="instagram.svg"
                 alt="Instagram"
                 width={24}
                 height={24}
@@ -227,7 +227,7 @@ export default function Home() {
             {/* TikTok */}
             <Link className="flex justify-center" href="https://www.tiktok.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               <Image
-                src="/icons/tiktok.svg"
+                src="tiktok.svg"
                 alt="TikTok"
                 width={24}
                 height={24}

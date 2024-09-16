@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'https://kuky-backend.fly.dev',
+    // baseURL: 'https://kuky-backend.fly.dev',
+    baseURL: 'localhost:3000',
 })
 
 export interface CreateUserDto {

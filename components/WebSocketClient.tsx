@@ -1,32 +1,46 @@
 import { useEffect, useState } from 'react';
-import io from 'socket.io-client';
 import Notification from './Notification';
+import data from './userData.json';
 
 const WebSocketClient = () => {
-    const [newUser, setNewUser] = useState<string | null>(null);
+    const [currentNotification, setCurrentNotification] = useState<{ name: string, goal: string } | null>(null);
+
+    const getRandomNotification = () => {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        return data[randomIndex];
+    };
+
     const handleCloseNotification = () => {
-        setNewUser(null);
+        setCurrentNotification(null);
     };
 
     useEffect(() => {
-        const socket = io('https://kuky-backend.fly.dev');
-
-        socket.on('new-user', (data) => {
-            setNewUser(data.message);
+        const showNotification = () => {
+            const randomNotification = getRandomNotification();
+            setCurrentNotification(randomNotification);
 
             setTimeout(() => {
-                setNewUser(null);
+                setCurrentNotification(null);
             }, 30000);
-        });
-
-        return () => {
-            socket.off('new-user');
         };
+
+        showNotification();
+
+        const intervalId = setInterval(() => {
+            showNotification();
+        }, Math.random() * 20000 + 10000);
+
+        return () => clearInterval(intervalId);
     }, []);
 
     return (
         <div>
-            {newUser && <Notification message={newUser} onClose={handleCloseNotification} />}
+            {currentNotification && (
+                <Notification
+                    message={`${currentNotification.name} has just joined with interest "${currentNotification.goal}"`}
+                    onClose={handleCloseNotification}
+                />
+            )}
         </div>
     );
 };

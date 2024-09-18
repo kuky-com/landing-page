@@ -40,6 +40,8 @@ const Header: React.FC<HeaderVideoPopupProps> = ({ setVideoOpen }) => {
                 </p>
             </div>
 
+            <WebSocketClient />
+
             <div className="flex items-center relative">
                 <button
                     onClick={setVideoOpen}
@@ -58,8 +60,6 @@ const Header: React.FC<HeaderVideoPopupProps> = ({ setVideoOpen }) => {
                 </button>
 
             </div>
-            <WebSocketClient />
-
         </header >
     )
 }

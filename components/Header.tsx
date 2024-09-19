@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import Link from 'next/link';
+import WebSocketClient from './WebSocketClient';
+import Notification from './Notification';
+
 interface HeaderVideoPopupProps {
     setVideoOpen: () => void;
 }
-const Header: React.FC<HeaderVideoPopupProps> = ({setVideoOpen}) => {
+const Header: React.FC<HeaderVideoPopupProps> = ({ setVideoOpen }) => {
     const [starCount, setStarCount] = useState<string>('');
 
     useEffect(() => {
@@ -34,9 +36,10 @@ const Header: React.FC<HeaderVideoPopupProps> = ({setVideoOpen}) => {
             <div className="flex items-center">
                 <Image src="/kuky-icon.svg" alt="Kuky Icon" width={34} height={34} />
                 <p className="ml-2 font-lexend text-[10px] font-bold leading-[12.5px] text-left text-black">
-                    PERFECT<br/>MATCH, FASTER
+                    PERFECT<br />MATCH, FASTER
                 </p>
             </div>
+
             <div className="flex items-center relative">
                 <button
                     onClick={setVideoOpen}
@@ -55,6 +58,8 @@ const Header: React.FC<HeaderVideoPopupProps> = ({setVideoOpen}) => {
                 </button>
 
             </div>
+            <WebSocketClient />
+
         </header >
     )
 }

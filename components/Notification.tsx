@@ -15,7 +15,7 @@ const Notification: React.FC<NotificationProps> = ({ message, onClose }) => {
                 </div>
                 {/* Message Content */}
                 <div className="ml-2 md:ml-3">
-                    <p className="text-sm font-semibold text-gray-900">New user added</p>
+                    <p className="text-sm font-semibold text-gray-900">New Sign Up</p>
                     <p className="text-xs md:text-sm text-gray-500">{message}</p>
                 </div>
             </div>

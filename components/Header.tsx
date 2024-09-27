@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import WebSocketClient from './WebSocketClient';
-import Notification from './Notification';
 
 interface HeaderVideoPopupProps {
     setVideoOpen: () => void;

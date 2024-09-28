@@ -24,13 +24,19 @@ const WebSocketClient = () => {
             }, 30000);
         };
 
-        showNotification();
+        const initialDelay = Math.random() * 5000 + 5000;
 
-        const intervalId = setInterval(() => {
+        const initialTimeout = setTimeout(() => {
             showNotification();
-        }, Math.random() * 20000 + 10000);
 
-        return () => clearInterval(intervalId);
+            const intervalId = setInterval(() => {
+                showNotification();
+            }, Math.random() * 20000 + 10000);
+
+            return () => clearInterval(intervalId);
+        }, initialDelay);
+
+        return () => clearTimeout(initialTimeout);
     }, []);
 
     return (

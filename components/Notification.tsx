@@ -5,7 +5,7 @@ interface NotificationProps {
 
 const Notification: React.FC<NotificationProps> = ({ message, onClose }) => {
     return (
-        <div className="fixed top-28 right-1 md:right-2 bg-white shadow-lg rounded-lg border border-gray-300 p-1 md:p-4 max-w-md flex items-center justify-between z-50 animate-slide-in">
+        <div className="fixed bottom-4 right-1 md:right-2 bg-white shadow-lg rounded-lg border border-gray-300 p-1 md:p-4 max-w-md flex items-center justify-between z-50 animate-slide-in">
             <div className="flex items-center">
                 {/* Icon */}
                 <div className="flex-shrink-0">
@@ -15,7 +15,7 @@ const Notification: React.FC<NotificationProps> = ({ message, onClose }) => {
                 </div>
                 {/* Message Content */}
                 <div className="ml-2 md:ml-3">
-                    <p className="text-sm font-semibold text-gray-900">New user added</p>
+                    <p className="text-sm font-semibold text-gray-900">New Sign Up</p>
                     <p className="text-xs md:text-sm text-gray-500">{message}</p>
                 </div>
             </div>

@@ -199,59 +199,44 @@ export default function Home() {
 
       </main>
       <footer className="mt-auto">
-        <div className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 ">
+        <div className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
           {/* Social Media */}
           <div className="flex space-x-4 mt-6">
             {/* YouTube */}
             <Link className="flex justify-center" href="https://www.youtube.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <Image
-                src="youtube.svg"
-                alt="YouTube"
-                width={24}
-                height={24}
-              />
+              <Image src="youtube.svg" alt="YouTube" width={24} height={24} />
             </Link>
 
             {/* Twitter */}
             <Link className="flex justify-center" href="https://twitter.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Image
-                src="twitter.svg"
-                alt="Twitter"
-                width={24}
-                height={24}
-              />
+              <Image src="twitter.svg" alt="Twitter" width={24} height={24} />
             </Link>
 
             {/* Instagram */}
             <Link className="flex justify-center" href="https://www.instagram.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <Image
-                src="instagram.svg"
-                alt="Instagram"
-                width={24}
-                height={24}
-              />
+              <Image src="instagram.svg" alt="Instagram" width={24} height={24} />
             </Link>
 
             {/* TikTok */}
             <Link className="flex justify-center" href="https://www.tiktok.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-              <Image
-                src="tiktok.svg"
-                alt="TikTok"
-                width={24}
-                height={24}
-              />
+              <Image src="tiktok.svg" alt="TikTok" width={24} height={24} />
             </Link>
           </div>
+
           <div className="text-[#9b9b9b] text-sm text-center max-w-md mt-4">
             <button onClick={() => setShowAboutUs(true)} className="underline">About us</button><span> | </span>
             <button onClick={() => setShowTnC(true)} className="underline">Terms & Conditions</button><span> | </span>
             <button onClick={() => setShowPrivacyPolicy(true)} className="underline">Privacy Policy</button>
           </div>
+
+          <div className="text-[#9b9b9b] text-sm text-center max-w-md mt-2">
+            <p>KUKY TECH PTY LTD</p>
+            <p>ABN 56 680 871 470</p>
+            <p>101/49 Queens Rd, Five Dock NSW 2046, Australia</p>
+          </div>
         </div>
-        <ResponsiveBottomImage
-          src="/bottom-background.png"
-          alt="Bottom image description"
-        />
+
+        <ResponsiveBottomImage src="/bottom-background.png" alt="Bottom image description" />
       </footer>
       {
         showPrivacyPolicy && (

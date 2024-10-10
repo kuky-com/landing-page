@@ -226,7 +226,8 @@ export default function Home() {
           <div className="text-[#9b9b9b] text-sm text-center max-w-md mt-4">
             <button onClick={() => setShowAboutUs(true)} className="underline">About us</button><span> | </span>
             <button onClick={() => setShowTnC(true)} className="underline">Terms & Conditions</button><span> | </span>
-            <button onClick={() => setShowPrivacyPolicy(true)} className="underline">Privacy Policy</button>
+            {/* <button onClick={() => setShowPrivacyPolicy(true)} className="underline">Privacy Policy</button> */}
+            <Link href="/privacy-policy" className="underline">Privacy Policy</Link>
           </div>
 
           <div className="text-[#9b9b9b] text-sm text-center max-w-md mt-2">

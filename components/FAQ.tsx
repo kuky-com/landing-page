@@ -53,25 +53,26 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="mb-4 w-full max-w-[800px]">
-            <div className="">
+        <div className="mb-4">
+            <div>
                 <button
                     className="flex justify-between items-center w-full text-left p-4 bg-[#F5F5F5] rounded-xl"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <span className="font-light text-base sm:text-lg text-[#686868] pr-4">{item.question}</span>
-                    <span className="text-xl sm:text-2xl text-[#686868] flex-shrink-0">{isOpen ? <Image src="arrow-up.svg" alt="arrow up" width={12} height={27} /> : <Image src="arrow-down.svg" alt="arrow down" width={12} height={27} />}</span>
+                    <span className="text-xl sm:text-2xl text-[#686868] flex-shrink-0">
+                        {isOpen ? (
+                            <Image src="arrow-up.svg" alt="arrow up" width={12} height={27} />
+                        ) : (
+                            <Image src="arrow-down.svg" alt="arrow down" width={12} height={27} />
+                        )}
+                    </span>
                 </button>
                 {isOpen && (
                     <div className="px-4 pb-4 text-[#686868] mt-4">
                         <div className="flex items-start">
                             <div className="flex-shrink-0 mr-4">
-                                <Image
-                                    src="arrow-indicator.svg"
-                                    alt="Answer indicator"
-                                    width={16}
-                                    height={16}
-                                />
+                                <Image src="arrow-indicator.svg" alt="Answer indicator" width={16} height={16} />
                             </div>
                             <p className="text-sm font-light sm:text-base">{item.answer}</p>
                         </div>
@@ -84,9 +85,9 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
 
 const FAQ: React.FC = () => {
     return (
-        <section className="w-full max-w-[800px] mx-auto my-8 sm:my-16 px-4">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-black">FAQ</h2>
-            <div className="space-y-4">
+        <section className="w-full max-w-[1200px] mx-auto my-8 sm:my-16 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-16 text-center text-black">FAQ</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {faqData.map((item, index) => (
                     <FAQItem key={index} item={item} />
                 ))}

@@ -1,17 +1,11 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link';
 import { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../../store'
-import { registerUser } from '../../store/userSlice'
-import { usePathname, useRouter } from 'next/navigation'
-import Header from '../../components/Header'
-import PrivacyPolicyPopup from '../../components/PrivacyPolicyPopup'
-import AboutUsPopup from '../../components/AboutUsPopup'
-import TnCPopup from '../../components/TnCPopup'
 
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 declare global {
     interface Window {
         grecaptcha: any;
@@ -19,15 +13,8 @@ declare global {
 }
 
 export default function Home() {
-    const dispatch = useDispatch<AppDispatch>()
-    const router = useRouter()
-    const pathname = usePathname()
 
     const { status, error } = useSelector((state: RootState) => state.user)
-    const [isVideoOpen, setIsVideoOpen] = useState<boolean>(false);
-    const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
-    const [showTnC, setShowTnC] = useState(false);
-    const [showAboutUs, setShowAboutUs] = useState(false);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
     const [formData, setFormData] = useState({
@@ -46,22 +33,6 @@ export default function Home() {
         }
         if (status == 'succeeded') setIsFormSubmitted(true)
     }, [status])
-
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
-    }
-
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        try {
-            const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, { action: 'register' })
-            const dataToSend = { ...formData, email: formData.email.trim().toLowerCase(), recaptchaToken: token };
-            dispatch(registerUser(dataToSend));
-        } catch (error) {
-            console.error('reCAPTCHA error:', error)
-        }
-    }
 
     return (
         <div className="min-h-screen bg-white flex flex-col">
@@ -171,46 +142,7 @@ export default function Home() {
                 </div>
 
             </main>
-            <footer className="mt-auto flex flex-col justify-center items-center border-t border-gray-300 w-full mb-16">
-
-                {/* Centered Logo at the top */}
-                <div className="flex justify-center items-start py-6 absolute">
-                    <Image src="kuky-logo.svg" alt="Kuky Logo" width={48} height={48} />
-                </div>
-
-                {/* Bottom section with social icons on the left and privacy links on the right */}
-                <div className="flex justify-between px-4 sm:px-6 lg:px-8 max-w-7xl w-full relative min-h-[120px]">
-
-                    {/* Social Media Icons on the left */}
-                    <div className="flex space-x-4 items-end justify-start">
-                        {/* Instagram */}
-                        <Link className="flex justify-center" href="https://www.instagram.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <Image src="instagram.svg" alt="Instagram" width={24} height={24} />
-                        </Link>
-
-                        {/* Twitter */}
-                        <Link className="flex justify-center" href="https://twitter.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <Image src="twitter.svg" alt="Twitter" width={24} height={24} />
-                        </Link>
-
-                        {/* Facebook */}
-                        <Link className="flex justify-center" href="https://www.facebook.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <Image src="facebook.svg" alt="Facebook" width={24} height={24} />
-                        </Link>
-
-                        {/* WhatsApp */}
-                        <Link className="flex justify-center" href="https://www.whatsapp.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                            <Image src="whatsapp.svg" alt="WhatsApp" width={24} height={24} />
-                        </Link>
-                    </div>
-                    {/* About Us, Terms & Conditions, Privacy Policy on the right */}
-                    <div className="flex space-x-4 justify-end items-end text-[#9b9b9b] text-sm">
-                        <button onClick={() => setShowAboutUs(true)} className="font-lato text-md font-200 text-center text-[#333333]">About Us</button>
-                        <button onClick={() => setShowTnC(true)} className="font-lato text-md font-200 text-center text-[#333333]">Terms & Conditions</button>
-                        <button onClick={() => setShowPrivacyPolicy(true)} className="font-lato text-md font-200 text-center text-[#333333]">Privacy Policy</button>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div >
     )
 }

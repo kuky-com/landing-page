@@ -124,19 +124,24 @@ export default function Home() {
                                 alt="Full Name"
                                 className="w-full h-auto rounded-lg object-cover mb-4 p-6"
                             />
-                            <h3 className="text-xl text-[#333333] font-normal mb-2">Full Name</h3>
-                            <p className="text-[#333333] font-light text-sm">Founder & CEO</p>
+                            <h3 className="text-xl text-[#333333] font-normal mb-2">Armin Nehzat</h3>
+                            <p className="text-[#333333] font-light text-sm">Sales & Marketing</p>
                         </div>
 
                         {/* Team Member 2 */}
                         <div className="text-center">
-                            <img
-                                src="cto-image.png" // Replace with the actual image path
-                                alt="Full Name"
-                                className="w-full h-auto rounded-lg object-cover mb-4 p-6"
-                            />
-                            <h3 className="text-xl text-[#333333] font-normal mb-2">Full Name</h3>
-                            <p className="text-[#333333] font-light text-sm">Title</p>
+                            <div
+                                className="w-full h-auto rounded-lg"
+                            >
+                                <img
+                                    src="cto-image.png" // Replace with the actual image path
+                                    alt="Full Name"
+                                    className="w-full h-auto rounded-lg object-cover mb-4 p-6"
+                                />
+                            </div>
+
+                            <h3 className="text-xl text-[#333333] font-normal mb-2">Ben Hong</h3>
+                            <p className="text-[#333333] font-light text-sm">Product & Operations</p>
                         </div>
 
                         {/* Team Member 3 */}
@@ -146,19 +151,20 @@ export default function Home() {
                                 alt="Full Name"
                                 className="w-full h-auto rounded-lg object-cover mb-4 p-6"
                             />
-                            <h3 className="text-xl text-[#333333] font-normal mb-2">Full Name</h3>
-                            <p className="text-[#333333] font-light text-sm">Title</p>
+                            <h3 className="text-xl text-[#333333] font-normal mb-2">Tung Mai</h3>
+                            <p className="text-[#333333] font-light text-sm">Engineering</p>
                         </div>
 
                         {/* Team Member 4 */}
                         <div className="text-center">
+
                             <img
-                                src="cdo-image.png" // Replace with the actual image path
+                                src="cdo-image.png"
                                 alt="Full Name"
                                 className="w-full h-auto rounded-lg object-cover mb-4 p-6"
                             />
-                            <h3 className="text-xl text-[#333333] font-normal mb-2">Full Name</h3>
-                            <p className="text-[#333333] font-light text-sm">Title</p>
+                            <h3 className="text-xl text-[#333333] font-normal mb-2">Sepideh Salimi</h3>
+                            <p className="text-[#333333] font-light text-sm">User Experience</p>
                         </div>
                     </div>
                 </section>

@@ -50,7 +50,9 @@ export default function Home() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
+
       const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, { action: 'register' })
+      console.log(formData, token, 'hhh')
       const dataToSend = { ...formData, email: formData.email.trim().toLowerCase(), recaptchaToken: token };
       dispatch(registerUser(dataToSend));
     } catch (error) {

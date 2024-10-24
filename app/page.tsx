@@ -4,7 +4,6 @@ import { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from '../store'
 import { registerUser } from '../store/userSlice'
-import { usePathname, useRouter } from 'next/navigation'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -42,7 +41,6 @@ export default function Home() {
     if (status == 'succeeded') setIsFormSubmitted(true)
   }, [status])
 
-
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
@@ -52,7 +50,6 @@ export default function Home() {
     try {
 
       const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, { action: 'register' })
-      console.log(formData, token, 'hhh')
       const dataToSend = { ...formData, email: formData.email.trim().toLowerCase(), recaptchaToken: token };
       dispatch(registerUser(dataToSend));
     } catch (error) {
@@ -65,10 +62,10 @@ export default function Home() {
 
       <Header />
 
-      <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0">
+      <main className="flex-grow flex flex-col justify-center items-center sm:px-4 sm:px-6 lg:px-0">
         <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
-          <div className="main-block-title">
+          <div className="main-block-title mx-8 sm:mx-0 mt-8 sm:mt-0">
             <h2 className="text-lg font-normal text-gray-700 leading-normal mb-2">Connect with Like-Minded Individuals</h2>
             <h1 className="text-2xl font-bold text-gray-900 leading-snug">
               <span className="font-bold">Kuky</span> helps you find meaningful connections through<br />
@@ -93,8 +90,8 @@ export default function Home() {
 
             {/* Signup form on the right */}
             <div className="w-full lg:w-1/2 main-block-signup">
-              <h3 className="ml-8 text-5xl font-600 text-[#5A2C90] text-left leading-normal">
-                Sign up today and<br /> Get <span className="text-5xl font-bold">3 months free!</span>
+              <h3 className="ml-8 text-4xl lg:text-5xl font-600 text-[#5A2C90] text-left leading-normal">
+                Sign up today and<br /> Get <span className="text-4xl lg:text-5xl font-bold">3 months free!</span>
               </h3>
               <form onSubmit={handleSubmit} className="p-8">
                 <div className="grid grid-cols-2 gap-6 mb-6">
@@ -135,6 +132,17 @@ export default function Home() {
                 >
                   Sign up free
                 </button>
+                {/* Notification section */}
+                {status === 'succeeded' && (
+                  <div className="my-2 p-4 text-green-400">
+                    Registration successful! Welcome aboard.
+                  </div>
+                )}
+                {status === 'failed' && (
+                  <div className="my-8 p-4 text-red-400">
+                    Registration failed: {error}
+                  </div>
+                )}
                 <p className="text-sm text-[#969696] text-center mt-6">
                   By submitting this form, you agree to our{' '}
                   <button onClick={() => setShowPrivacyPolicy(true)} className="underline">
@@ -142,7 +150,6 @@ export default function Home() {
                   </button>
                   , and allow kuky to use this information for marketing purposes. We are committed to handling your personal data responsibly.
                 </p>
-
               </form>
             </div>
           </div>
@@ -157,11 +164,11 @@ export default function Home() {
         </section>
 
         <section className="w-full max-w-4xl mx-auto m-24">
-          <h2 className="font-lexend text-[#333333] text-3xl font-bold text-center mb-8">Why Kuky?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="font-lexend text-[#333333] text-3xl font-bold text-center mb-16 sm:mb-8">Why Kuky?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-8 sm:mx-4">
             <div className="text-center">
               <h3 className="font-bold text-xl mb-4 text-[#333333]">AI-Based Connections</h3>
-              <p className="font-200 leading-relaxed text-[#333333]">Our advanced AI understands your unique needs and helps you find the right connections faster.</p>
+              <p className="font-200 leading-relaxed  text-[#333333]">Our advanced AI understands your unique needs and helps you find the right connections faster.</p>
             </div>
             <div className="text-center">
               <h3 className="font-bold text-xl mb-4 text-[#333333]">Shared Experiences</h3>
@@ -179,7 +186,7 @@ export default function Home() {
           <p className="text-[#E8FF58] text-center mb-16">Connect with Like-Minded Individuals</p>
           <div className="flex justify-center">
             <button
-              className="bg-gray-800 hover:bg-gray-700 text-white font-200 py-3 px-6 rounded-[20px] w-1/3 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
+              className="bg-gray-800 hover:bg-gray-700 text-white font-200 py-3 px-6 rounded-[20px] sm:w-1/3 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
             >
               Sign up free
             </button>

@@ -42,7 +42,7 @@ export default function Home() {
             <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0">
 
 
-                <div className="bg-white rounded-lg max-h-[80vh] overflow-y-auto no-scrollbar">
+                <div className="bg-white rounded-lg">
                     <div className="p-6 sm:p-8 md:p-10 max-w-4xl">
 
                         <div className="text-center text-[#333333] rounded-lg p-6 mb-6">
@@ -53,7 +53,7 @@ export default function Home() {
                         </div>
 
                         <div className="bg-[#f5f5f5] rounded-[30px] px-8 py-4 mb-12">
-                            <p className="text-3xl text-[#333333] font-semibold mb-2 leading-relaxed">
+                            <p className="text-lg sm:text-3xl text-[#333333] font-semibold mb-2 leading-relaxed">
                                 By accessing or using our app, you agree to comply with these terms. Please read them carefully.
                             </p>
                         </div>

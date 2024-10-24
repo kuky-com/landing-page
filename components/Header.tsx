@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Header: React.FC = () => {
     return (
         <header className="p-4 flex w-full flex-col items-center bg-white">
-            <div className="flex justify-between items-center w-full max-w-7xl mb-6 lg:mb-8 px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Logo */}
                 <div className="flex items-center">
                     <Image src="/kuky-logo.svg" alt="Kuky Icon" width={34} height={34} />

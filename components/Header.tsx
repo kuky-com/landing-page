@@ -3,12 +3,14 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
     return (
-        <header className="p-4 flex w-full flex-col items-center bg-white">
+        <header className="p-4 flex w-full flex-col items-center bg-white fixed top-0 left-0 z-50">
             <div className="flex justify-between items-center w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 {/* Logo */}
-                <div className="flex items-center">
-                    <Image src="/kuky-logo.svg" alt="Kuky Icon" width={34} height={34} />
-                </div>
+                <Link href="/" passHref>
+                    <div className="flex items-center">
+                        <Image src="/kuky-logo.svg" alt="Kuky Icon" width={34} height={34} />
+                    </div>
+                </Link>
 
                 <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-12 relative">
                     {/* About Us Button */}

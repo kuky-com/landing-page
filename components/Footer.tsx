@@ -5,9 +5,11 @@ const Footer: React.FC = () => {
     return (
         <footer className="mt-auto flex flex-col justify-center items-center border-t border-gray-300 w-full mb-8 lg:mb-16 px-4 sm:px-6 lg:px-8">
             {/* Centered Logo at the top */}
-            <div className="flex justify-center items-start py-4 sm:py-6">
-                <Image src="/kuky-logo.svg" alt="Kuky Logo" width={48} height={48} />
-            </div>
+            <Link href="/" passHref>
+                <div className="flex justify-center items-start py-4 sm:py-6">
+                    <Image src="/kuky-logo.svg" alt="Kuky Logo" width={48} height={48} />
+                </div>
+            </Link>
 
             {/* Bottom section with social icons on the left and privacy links on the right */}
             <div className="flex flex-col sm:flex-row justify-between items-center max-w-7xl w-full relative py-4 min-h-[120px]">

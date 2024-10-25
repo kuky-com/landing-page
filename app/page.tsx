@@ -62,7 +62,7 @@ export default function Home() {
 
       <Header />
 
-      <main className="flex-grow flex flex-col justify-center items-center sm:px-4 sm:px-6 lg:px-0">
+      <main className="flex-grow flex flex-col justify-center items-center sm:px-4 sm:px-6 lg:px-0 mt-[92px]">
         <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
           <div className="main-block-title mx-8 sm:mx-0 mt-8 sm:mt-0">

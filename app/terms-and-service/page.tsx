@@ -39,7 +39,7 @@ export default function Home() {
 
             <Header />
 
-            <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0">
+            <main className="flex-grow flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0 mt-[92px]">
 
 
                 <div className="bg-white rounded-lg">

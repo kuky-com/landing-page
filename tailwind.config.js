@@ -15,8 +15,7 @@ module.exports = {
         'custom-gray': 'rgba(102, 102, 102, 1)',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
-        lexend: ['Lexend', 'sans-serif'],
+        sans: ['Lato', 'sans-serif'],
       },
     },
   },

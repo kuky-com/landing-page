@@ -174,11 +174,35 @@ export default function Home() {
                     <h2 className="font-lexend text-3xl font-bold text-center mb-6">Join our Community</h2>
                     <p className="text-[#E8FF58] text-center mb-16">Be a Part of Something Bigger</p>
                     <div className="flex justify-center">
-                        <button
-                            className="bg-gray-800 hover:bg-gray-700 text-white font-200 py-3 px-6 rounded-[20px] sm:w-1/3 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]"
-                        >
-                            Sign up free
-                        </button>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8">
+                            {/* App Store Button */}
+                            <a
+                                href="https://apps.apple.com/au/app/kuky/id6711341485"
+                                className="flex items-center justify-center w-auto"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="/apple-app-store.png" // Replace with actual path to the App Store image
+                                    alt="Download on the App Store"
+                                    className="h-16 sm:h-24" // Adjust height responsively
+                                />
+                            </a>
+
+                            {/* Google Play Button */}
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.kuky.android"
+                                className="flex items-center justify-center w-auto"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="/google-play.png" // Replace with actual path to the Google Play image
+                                    alt="Get it on Google Play"
+                                    className="h-16 sm:h-24" // Adjust height responsively
+                                />
+                            </a>
+                        </div>
                     </div>
                 </section>
             </main>

@@ -66,9 +66,9 @@ export default function Home() {
         <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
           <div className="main-block-title mx-8 sm:mx-0 mt-8 sm:mt-0">
-            <h2 className="text-lg font-normal text-gray-700 leading-normal mb-2">Connect with Like-Minded Individuals</h2>
-            <h1 className="text-2xl font-bold text-gray-900 leading-snug">
-              <span className="font-bold">Kuky</span> helps you find meaningful connections through<br />
+            <h2 className="text-xl font-normal text-[#333333] leading-normal mb-2">Connect with Like-Minded Individuals</h2>
+            <h1 className="text-3xl font-700 text-[#494949] leading-release">
+              <span className="font-700 text-black">Kuky</span> helps you find meaningful connections through<br />
               shared experiences.
             </h1>
           </div>
@@ -90,9 +90,11 @@ export default function Home() {
 
             {/* Signup form on the right */}
             <div className="w-full lg:w-1/2 main-block-signup">
-              <h3 className="ml-8 text-4xl lg:text-5xl font-600 text-[#5A2C90] text-left leading-normal">
-                Sign up today and<br /> Get <span className="text-4xl lg:text-5xl font-bold">3 months free!</span>
-              </h3>
+              <div className="ml-8 text-4xl lg:text-5xl font-medium text-[#5A30C1] text-left leading-normal">
+                <div className="mb-4">Sign up today and</div>
+                <div> Get <span className="text-4xl lg:text-5xl font-bold">3 months free!</span></div>
+              </div>
+
               <form onSubmit={handleSubmit} className="p-8">
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   <input
@@ -127,7 +129,7 @@ export default function Home() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 bg-black text-white font-semibold rounded-full shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-gray-900 transition-all duration-300"
+                  className="w-full py-4 bg-black text-white font-light text-xl rounded-full shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-gray-900 transition-all duration-300"
                   disabled={status === 'loading'}
                 >
                   Sign up free
@@ -143,9 +145,9 @@ export default function Home() {
                     Registration failed: {error}
                   </div>
                 )}
-                <p className="text-sm text-[#969696] text-center mt-6">
+                <p className="text-sm font-light text-[#969696] text-center mt-6">
                   By submitting this form, you agree to our{' '}
-                  <button onClick={() => setShowPrivacyPolicy(true)} className="underline">
+                  <button onClick={() => setShowPrivacyPolicy(true)} >
                     <span className="font-bold">Privacy Policy</span>
                   </button>
                   , and allow kuky to use this information for marketing purposes. We are committed to handling your personal data responsibly.
@@ -196,7 +198,7 @@ export default function Home() {
                 <img
                   src="/apple-app-store.png" // Replace with actual path to the App Store image
                   alt="Download on the App Store"
-                  className="h-16 sm:h-24" // Adjust height responsively
+                  className="h-16" // Adjust height responsively
                 />
               </a>
 
@@ -210,7 +212,7 @@ export default function Home() {
                 <img
                   src="/google-play.png" // Replace with actual path to the Google Play image
                   alt="Get it on Google Play"
-                  className="h-16 sm:h-24" // Adjust height responsively
+                  className="h-16" // Adjust height responsively
                 />
               </a>
             </div>

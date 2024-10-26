@@ -185,7 +185,7 @@ export default function Home() {
                                 <img
                                     src="/apple-app-store.png" // Replace with actual path to the App Store image
                                     alt="Download on the App Store"
-                                    className="h-16 sm:h-24" // Adjust height responsively
+                                    className="h-16" // Adjust height responsively
                                 />
                             </a>
 
@@ -199,7 +199,7 @@ export default function Home() {
                                 <img
                                     src="/google-play.png" // Replace with actual path to the Google Play image
                                     alt="Get it on Google Play"
-                                    className="h-16 sm:h-24" // Adjust height responsively
+                                    className="h-16" // Adjust height responsively
                                 />
                             </a>
                         </div>

@@ -78,7 +78,7 @@ export default function Home() {
                         </div>
 
                         <div className="bg-[#f5f5f5] rounded-[30px] px-8 py-4 mb-12">
-                            <p className="text-lgsm:text-3xl text-[#333333] font-semibold mb-2 leading-relaxed">
+                            <p className="text-lg sm:text-3xl text-[#333333] font-semibold mb-2 !leading-relaxed">
                                 Your trust matters deeply to us at Kuky. As such, we pledge to safeguard your private information while providing top-quality services:
                             </p>
                         </div>

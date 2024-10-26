@@ -1,7 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const Header: React.FC = () => {
+    const [isAboutPage, setIsAboutPage] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            // Check if the current path is "/about-us"
+            setIsAboutPage(window.location.pathname === '/about-us');
+        }
+    }, []);
+
+    const bgColor = isAboutPage ? 'bg-[#725ED4]' : 'bg-gray-100';
+    const txtColor = isAboutPage ? 'text-white' : 'text-[#333333]';
     return (
         <header className="p-4 flex w-full flex-col items-center bg-white fixed top-0 left-0 z-50">
             <div className="flex justify-between items-center w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -15,7 +27,7 @@ const Header: React.FC = () => {
                 <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-12 relative">
                     {/* About Us Button */}
                     <Link href="/about-us" passHref>
-                        <div className="bg-gray-100 text-[#333333] font-light py-2 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base rounded-full shadow-sm hover:bg-gray-200">
+                        <div className={`${bgColor} ${txtColor} font-light py-2 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base rounded-full shadow-sm hover:bg-gray-200`}>
                             About us
                         </div>
                     </Link>

@@ -53,7 +53,7 @@ export default function Home() {
                         </div>
 
                         <div className="bg-[#f5f5f5] rounded-[30px] px-8 py-4 mb-12">
-                            <p className="text-lg sm:text-3xl text-[#333333] font-semibold mb-2 leading-relaxed">
+                            <p className="text-lg sm:text-3xl text-[#333333] font-semibold mb-2 !leading-relaxed">
                                 By accessing or using our app, you agree to comply with these terms. Please read them carefully.
                             </p>
                         </div>

@@ -184,7 +184,7 @@ export default function Home() {
         </section>
 
         <section className="w-full mx-auto bg-[#725ED4] p-16">
-          <h2 className="font-lexend text-3xl font-bold text-center mb-6">Ready to Find Your Community?</h2>
+          <h2 className="text-white text-3xl font-bold text-center mb-6">Ready to Find Your Community?</h2>
           <p className="text-[#E8FF58] text-center mb-8">Connect with Like-Minded Individuals</p>
           <div className="flex justify-center">
             <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8">

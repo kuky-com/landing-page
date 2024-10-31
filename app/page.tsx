@@ -66,7 +66,7 @@ export default function Home() {
         <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
           <div className="main-block-title mx-8 sm:mx-0 mt-8 sm:mt-0">
-            <h2 className="text-xl font-normal text-[#333333] leading-normal mb-2">Connect with Like-Minded Individuals</h2>
+            <h2 className="text-xl font-normal text-[#333333] leading-normal mb-2">Connect with people on the same journey as you</h2>
             <h1 className="text-3xl font-700 text-[#494949] leading-release">
               <span className="font-700 text-black">Kuky</span> helps you find meaningful connections through<br />
               shared experiences.

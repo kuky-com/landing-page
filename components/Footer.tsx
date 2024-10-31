@@ -16,22 +16,22 @@ const Footer: React.FC = () => {
                 {/* Social Media Icons on the left */}
                 <div className="flex space-x-4 items-center mb-4 sm:mb-0">
                     {/* Instagram */}
-                    <Link className="flex justify-center" href="https://www.instagram.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <Link className="flex justify-center" href="https://www.instagram.com/kuky_app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <Image src="/instagram.svg" alt="Instagram" width={24} height={24} />
                     </Link>
 
                     {/* Twitter */}
-                    <Link className="flex justify-center" href="https://twitter.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <Link className="flex justify-center" href="https://x.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                         <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
                     </Link>
 
                     {/* Facebook */}
-                    <Link className="flex justify-center" href="https://www.facebook.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <Link className="flex justify-center" href="https://facebook.com/kukyapp" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <Image src="/facebook.svg" alt="Facebook" width={24} height={24} />
                     </Link>
 
                     {/* WhatsApp */}
-                    <Link className="flex justify-center" href="https://www.whatsapp.com/kuky_app" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <Link className="flex justify-center" href="https://wa.me/610491711556" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <Image src="/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
                     </Link>
                 </div>

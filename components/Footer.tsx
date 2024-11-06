@@ -34,6 +34,16 @@ const Footer: React.FC = () => {
                     <Link className="flex justify-center" href="https://wa.me/610491711556" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <Image src="/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
                     </Link>
+
+                    {/* Tiktok */}
+                    <Link className="flex justify-center" href="https://www.tiktok.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
+                        <Image src="/tiktok.svg" alt="WhatsApp" width={24} height={24} />
+                    </Link>
+
+                    {/* YouTube */}
+                    <Link className="flex justify-center" href="https://www.youtube.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <Image src="/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
+                    </Link>
                 </div>
 
                 {/* About Us, Terms & Conditions, Privacy Policy on the right */}

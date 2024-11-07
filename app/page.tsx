@@ -166,19 +166,34 @@ export default function Home() {
         </section>
 
         <section className="w-full max-w-4xl mx-auto m-24">
-          <h2 className="font-lexend text-[#333333] text-3xl font-bold text-center mb-16 sm:mb-8">Why Kuky?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-8 sm:mx-4">
-            <div className="text-center">
-              <h3 className="font-bold text-xl mb-4 text-[#333333]">AI-Based Connections</h3>
-              <p className="font-200 leading-relaxed  text-[#333333]">Our advanced AI understands your unique needs and helps you find the right connections faster.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-bold text-xl mb-4 text-[#333333]">Shared Experiences</h3>
-              <p className="font-200 leading-relaxed text-[#333333]">Kuky connects you with others who share similar life experiences, creating meaningful bonds.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-bold text-xl mb-4 text-[#333333]">Diverse Communities</h3>
-              <p className="font-200 leading-relaxed text-[#333333]">Join a variety of support groups and communities, from cancer survivors to new parents.</p>
+          <h2 className="font-lexend text-[#333333] text-3xl font-bold text-center mb-16">Connect with others on the same journey as you</h2>
+          <div className="relative w-full h-0 pb-[56.25%]">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-lg p-4 sm:p-0"
+              src="https://www.youtube.com/embed/peVUvZqr49A?si=pVNF2y-s4JyBcQZx"
+              title="Kuky Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+
+        <section className="w-full bg-[#f5f5f5] mx-auto p-16">
+          <div className="w-full max-w-4xl bg-[#f5f5f5] mx-auto m-24">
+            <h2 className="font-lexend text-[#333333] text-3xl font-bold text-center mb-16 sm:mb-16">Why Kuky?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-8 sm:mx-4">
+              <div className="text-center">
+                <h3 className="font-bold text-xl mb-4 text-[#333333]">AI-Based Connections</h3>
+                <p className="font-200 leading-relaxed  text-[#333333]">Our advanced AI understands your unique needs and helps you find the right connections faster.</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold text-xl mb-4 text-[#333333]">Shared Experiences</h3>
+                <p className="font-200 leading-relaxed text-[#333333]">Kuky connects you with others who share similar life experiences, creating meaningful bonds.</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-bold text-xl mb-4 text-[#333333]">Diverse Communities</h3>
+                <p className="font-200 leading-relaxed text-[#333333]">Join a variety of support groups and communities, from cancer survivors to new parents.</p>
+              </div>
             </div>
           </div>
         </section>

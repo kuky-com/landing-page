@@ -6,17 +6,13 @@
         "appID": "CYP38L8DLB.com.kuky.ios",
         "paths": [
           "*"
-        }
-      ]
-    }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "CYP38L8DLB.com.kuky.ios"
+    ]
   }
-]
-}
-]
-},
-"webcredentials": {
-"apps": [
-"CYP38L8DLB.com.kuky.ios"
-]
-}
 }

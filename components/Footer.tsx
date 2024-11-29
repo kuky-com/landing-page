@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
 
                     {/* Tiktok */}
                     <Link className="flex justify-center" href="https://www.tiktok.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
-                        <Image src="/tiktok.svg" alt="WhatsApp" width={24} height={24} />
+                        <Image src="/tiktok.svg" alt="Tiktok" width={24} height={24} />
                     </Link>
 
                     {/* YouTube */}
                     <Link className="flex justify-center" href="https://www.youtube.com/@kuky_app" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <Image src="/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
+                        <Image src="/youtube.svg" alt="Youtube" width={24} height={24} />
                     </Link>
                 </div>
 

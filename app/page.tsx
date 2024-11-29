@@ -190,7 +190,7 @@ export default function Home() {
                 <h3 className="font-bold text-xl mb-4 text-[#333333]">Shared Experiences</h3>
                 <p className="font-200 leading-relaxed text-[#333333]">Kuky connects you with others who share similar life experiences, creating meaningful bonds.</p>
               </div>
-              <div className="text-center">
+              <div className="text-center" id="download-app">
                 <h3 className="font-bold text-xl mb-4 text-[#333333]">Diverse Communities</h3>
                 <p className="font-200 leading-relaxed text-[#333333]">Join a variety of support groups and communities, from cancer survivors to new parents.</p>
               </div>
@@ -198,7 +198,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full mx-auto bg-[#725ED4] p-16">
+        <section className="w-full mx-auto bg-[#725ED4] p-16"  >
           <h2 className="text-white text-3xl font-bold text-center mb-6">Ready to Find Your Community?</h2>
           <p className="text-[#E8FF58] text-center mb-8">Connect with Like-Minded Individuals</p>
           <div className="flex justify-center">

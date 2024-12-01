@@ -63,8 +63,7 @@ export default function Home() {
       <Header />
 
       <main className="flex-grow flex flex-col justify-center items-center sm:px-4 sm:px-6 lg:px-0 mt-[92px]">
-        <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 main-block">
-          {/* Title section at the top */}
+        <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 main-block lg:px-8">
           <div className="main-block-title mx-8 sm:mx-0 mt-8 sm:mt-0">
             <h2 className="text-xl font-normal text-[#333333] leading-normal mb-2">Connect with people on the same journey as you</h2>
             <h1 className="text-3xl font-700 text-[#494949] leading-release">
@@ -211,9 +210,9 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/apple-app-store.png" // Replace with actual path to the App Store image
+                  src="/apple-app-store.png"
                   alt="Download on the App Store"
-                  className="h-16" // Adjust height responsively
+                  className="h-16"
                 />
               </a>
 
@@ -225,9 +224,9 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/google-play.png" // Replace with actual path to the Google Play image
+                  src="/google-play.png"
                   alt="Get it on Google Play"
-                  className="h-16" // Adjust height responsively
+                  className="h-16"
                 />
               </a>
             </div>

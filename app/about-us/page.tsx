@@ -43,7 +43,7 @@ export default function Home() {
             <main className="flex-grow flex flex-col justify-center items-center sm:px-6 lg:px-0 mt-[92px]">
                 <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 main-block">
                     {/* Title section at the top */}
-                    <div className="main-block-title">
+                    <div className="main-block-title lg:p-12">
                         <h2 className="text-lg font-normal text-[#333333] leading-normal mb-2 mx-4 sm:mx-0">Our Mission:</h2>
                         <h1 className="text-2xl font-normal text-[#494949] leading-snug mx-4 sm:mx-0">
                             Connecting People Through Shared Experiences

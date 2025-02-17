@@ -67,12 +67,12 @@ export default function Home() {
               </div>
             </div>
             <Image
-              className="absolute top-0 xl:left-[-150px]  left-[-150px]"
+              className="absolute top-0 xl:left-[-150px]  left-[-150px] select-none pointer-events-none "
               src={shadowimage}
               alt="landingimage"
             />
             <Image
-              className="absolute top-[-170px] xl:right-[-150px]  right-[-100px]"
+              className="absolute top-[-170px] xl:right-[-150px]  right-[-100px] select-none pointer-events-none "
               src={shadowimagetwo}
               alt="landingimage"
             />

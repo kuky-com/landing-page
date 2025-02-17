@@ -216,9 +216,15 @@ export default function Home() {
                 platform!
               </p>
               <div className="mt-8 flex flex-col justify-start items-start gap-3">
-                <button className="bg-[#333333] text-white md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
-                  Listen on spotify
-                </button>
+                <a
+				  href="https://open.spotify.com/show/3CkgnjWzvuNeilZBOgOPqs?si=c833d254ee7c465b"
+				  target="_blank"
+				  rel="noopener noreferrer"
+				>
+				  <button className="bg-[#333333] text-white md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
+				    Listen on Spotify
+				  </button>
+				</a>
                 <button className="border-[1px] border-[#333333] border-solid text-[#333333] md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
                   Apply to be on the show
                 </button>

@@ -54,7 +54,7 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
           )}
 
           {/* Sign Up Free Button */}
-          <Link href="/" passHref>
+          <Link href="https://app.kuky.com/" passHref>
             <div className="bg-[#333333] text-white font-light py-2 px-4 sm:px-10 lg:px-16 text-xs sm:text-sm lg:text-base rounded-full shadow-md hover:bg-gray-700">
               Sign up free
             </div>

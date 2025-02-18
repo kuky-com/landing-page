@@ -8,16 +8,21 @@ interface IProps {
 
 const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
   const [isAboutPage, setIsAboutPage] = useState(false);
+  const [isAmbassadorPage, setIsAmbassadorPage] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Check if the current path is "/about-us"
       setIsAboutPage(window.location.pathname === "/about-us");
+      setIsAmbassadorPage(window.location.pathname === "/ambassador");
     }
   }, []);
 
   const bgColor = isAboutPage ? "bg-[#725ED4]" : "bg-gray-100";
   const txtColor = isAboutPage ? "text-white" : "text-[#333333]";
+  const bgColoramba = isAmbassadorPage ? "bg-[#725ED4]" : "bg-gray-100";
+  const txtColoramba = isAmbassadorPage ? "text-white" : "text-[#333333]";
+
   return (
     <header className="p-4 flex w-full flex-col items-center bg-white fixed top-0 left-0 z-50">
       <div className="flex justify-between items-center w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -37,16 +42,16 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
           {/* About Us Button */}
           <Link href="/about-us" passHref>
             <div
-              className={`${bgColor} ${txtColor} font-light py-2 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base rounded-full shadow-sm hover:bg-gray-200`}
+              className={`${bgColor} ${txtColor} font-light py-2 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base rounded-full shadow-sm hover:bg-gray-200 hover:text-black`}
             >
               About us
             </div>
           </Link>
 
           {showAmbassadorBtn && (
-            <Link href="/" passHref>
+            <Link href="/ambassador" passHref>
               <div
-                className={`${bgColor} ${txtColor} font-light py-2 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base sm:block hidden rounded-full shadow-sm hover:bg-gray-200`}
+                className={`${bgColoramba} ${txtColoramba} font-light py-2 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base sm:block hidden rounded-full shadow-sm hover:bg-gray-200 hover:text-black`}
               >
                 Become an Ambassador
               </div>
@@ -55,7 +60,7 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
 
           {/* Sign Up Free Button */}
           <Link href="https://app.kuky.com/" passHref>
-            <div className="bg-[#333333] text-white font-light py-2 px-4 sm:px-10 lg:px-16 text-xs sm:text-sm lg:text-base rounded-full shadow-md hover:bg-gray-700">
+            <div className="bg-[#333333] text-white font-light py-2 px-4 sm:px-10 lg:px-16 text-xs sm:text-sm lg:text-base rounded-full shadow-md hover:bg-gray-200 hover:text-black">
               Sign up free
             </div>
           </Link>

@@ -61,7 +61,7 @@ export default function Home() {
                   <Image
                     className="bg-cover object-fit max-h-[600px] w-auto"
                     src={about}
-                    alt="landingimage"
+                    alt="about kuky image"
                   />
                 </div>
               </div>
@@ -69,12 +69,12 @@ export default function Home() {
             <Image
               className="absolute top-0 xl:left-[-150px]  left-[-150px] select-none pointer-events-none "
               src={shadowimage}
-              alt="landingimage"
+              alt="blur image blue"
             />
             <Image
               className="absolute top-[-170px] xl:right-[-150px]  right-[-100px] select-none pointer-events-none "
               src={shadowimagetwo}
-              alt="landingimage"
+              alt="blur image blue"
             />
           </div>
         </div>
@@ -84,7 +84,11 @@ export default function Home() {
           <div className="w-full max-w-7xl mx-auto bg-[#725ED4] rounded-[10px]">
             <div className="text-center pt-11 sm:pb-[80px] pb-10">
               <div className="items-center justify-center w-full flex flex-row">
-                <Image className="max-h-[66px] w-auto" src={icon} alt="icon" />
+                <Image
+                  className="max-h-[66px] w-auto"
+                  src={icon}
+                  alt="cloud icon"
+                />
               </div>
 
               <h2 className="lg:text-4xl text-3xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
@@ -161,7 +165,11 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:p-0 p-2">
             <div className="col-span-2 lg:col-start-2 col-start-1 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
-                <Image className="bg-cover w-full" src={people1} alt="" />
+                <Image
+                  className="bg-cover w-full"
+                  src={people1}
+                  alt="people1"
+                />
               </div>
               <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
                 <h3 className="text-[18px] font-black mb-2">Belinda Agnew</h3>
@@ -170,7 +178,11 @@ export default function Home() {
             </div>
             <div className="col-span-2 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
-                <Image className="bg-cover w-full" src={people2} alt="" />
+                <Image
+                  className="bg-cover w-full"
+                  src={people2}
+                  alt="people2"
+                />
               </div>
               <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
                 <h3 className="text-[18px] font-black mb-2">Sepideh Salimi</h3>
@@ -179,7 +191,11 @@ export default function Home() {
             </div>
             <div className="col-span-2 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
-                <Image className="bg-cover w-full" src={people3} alt="" />
+                <Image
+                  className="bg-cover w-full"
+                  src={people3}
+                  alt="people3"
+                />
               </div>
               <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
                 <h3 className="text-[18px] font-black mb-2">Armin Nehzat</h3>
@@ -188,7 +204,11 @@ export default function Home() {
             </div>
             <div className="col-span-2 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
-                <Image className="bg-cover w-full" src={people4} alt="" />
+                <Image
+                  className="bg-cover w-full"
+                  src={people4}
+                  alt="people4"
+                />
               </div>
               <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
                 <h3 className="text-[18px] font-black mb-2">Ben Hong</h3>
@@ -197,7 +217,11 @@ export default function Home() {
             </div>
             <div className="col-span-2 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
-                <Image className="bg-cover w-full" src={people5} alt="" />
+                <Image
+                  className="bg-cover w-full"
+                  src={people5}
+                  alt="people5"
+                />
               </div>
               <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
                 <h3 className="text-[18px] font-black mb-2">Tung Mai</h3>

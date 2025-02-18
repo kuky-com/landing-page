@@ -2,7 +2,6 @@
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import landing from "./communityfind.png";
 import profile1 from "./profile1.png";
 import profile2 from "./profile2.png";
 import curve from "./curve.png";
@@ -37,27 +36,31 @@ export default function Home() {
         <div className="w-full  mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
           <div className="main-block-title mt-10 relative sm:p-0 p-2">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <h2
-                className="lg:text-3xl text-2xl font-normal text-[#333333] leading-normal  mx-4 sm:mx-0 mb-4"
+                className="lg:text-4xl text-2xl font-normal text-[#333333] leading-normal  mx-4 sm:mx-0 mb-4"
                 style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
               >
                 <span className="font-bold">Kuky</span> helps you find
-                meaningful connections through shared experiences.
+                meaningful connections <br /> through shared experiences.
               </h2>
 
-              <div className="flex flex-col md:flex-row gap-5 items-center justify-center lg:gap-2">
-                <div className="mx-auto">
-                  <Image
-                    className="bg-cover md:w-[330px] w-full h-full pt-8"
-                    src={landing}
-                    alt="landingimage"
-                  />
+              {/* youtube shorts video */}
+              <div className="flex flex-col md:flex-row mt-10 items-center justify-center lg:gap-2">
+                <div className="relative sm:w-[38%] w-[100%] pb-[70%] bg-[#715ED4] rounded-2xl overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/9V658Z75Ly4"
+                    title="YouTube kuky Shorts Video"
+                    className="absolute top-0 left-0 w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-                <div className="mx-auto md:ml-5">
-                  <h1 className="lg:text-[46px] text-[40px] lg:leading-[55px] leading-[50px] font-black text-[#725ED4]">
+
+                <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0">
+                  <h1 className="lg:text-[44px] text-[40px] lg:leading-[55px] leading-[50px] font-black text-[#725ED4]">
                     Ready to Find
-                    <br />
+                    <br className="sm:block hidden" />
                     Your Community?
                   </h1>
                   <p className="text-[#725ED4] lg:text-[30px] text-[25px] lg:leading-[45px] leading-[35px] font-medium pt-6">
@@ -68,77 +71,44 @@ export default function Home() {
                     Individuals
                   </p>
                   <div className="flex items-center lg:justify-start justify-center lg:flex-nowrap flex-wrap gap-3">
-                  <a
-		                href="https://apps.apple.com/au/app/kuky/id6711341485"
-		                className="flex items-center justify-center w-auto"
-		                target="_blank"
-		                rel="noopener noreferrer"
-		              >
-                    <Image
-                      className="bg-cover lg:w-[250px] w-[200px]  pt-8"
-                      src={appstore}
-                      alt="landingimage"
-                    />
-                    </a>
-                    <a
-		                href="https://play.google.com/store/apps/details?id=com.kuky.android"
-		                className="flex items-center justify-center w-auto"
-		                target="_blank"
-		                rel="noopener noreferrer"
-		              >
-                    <Image
-                      className="bg-cover  lg:w-[250px] w-[200px] w-[250px] pt-8"
-                      src={playstore}
-                      alt="landingimage"
-                    />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* <div className="flex flex-row gap-5 pt-8">
-                <Image
-                  className="bg-cover max-w-[260px] bg-[red]"
-                  src={landing}
-                  alt="landingimage"
-                />
-               
-                <div className="text-center text-[#725ED4] md:text-left mt-6 md:mt-0">
-                  <h2 className="text-[45px] font-extrabold leading-[60px] mt-5">
-                    Ready to Find <br /> Your Community?
-                  </h2>
-                  <h1 className="text-2xl leading-[45px] mt-2 text-[#725ED4]">
-                    Download Kuky and <br /> connect with Like-Minded <br />
-                    Individuals
-                  </h1>
-
-                  <div className="flex flex-col md:flex-row items-center mt-6 space-y-3 md:space-y-0 md:space-x-4">
                     <a
                       href="https://apps.apple.com/au/app/kuky/id6711341485"
                       className="flex items-center justify-center w-auto"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img
-                        src="/apple-app-store.png" // Replace with actual path to the App Store image
-                        alt="Download on the App Store"
-                        className="h-16" // Adjust height responsively
+                      <Image
+                        className="bg-cover lg:w-[230px] w-[200px]  pt-8"
+                        src={appstore}
+                        alt="apple app store"
+                      />
+                    </a>
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.kuky.android"
+                      className="flex items-center justify-center w-auto"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        className="bg-cover  lg:w-[230px] w-[200px]  pt-8"
+                        src={playstore}
+                        alt="google play store"
                       />
                     </a>
                   </div>
                 </div>
-              </div> */}
-            {/* </div> */}
+              </div>
+            </div>
+
             <Image
               className="absolute left-[-80px] top-0 select-none pointer-events-none"
               src={shadoimage}
-              alt="landingimage"
+              alt="blur image blue"
             />
             <Image
               className="absolute right-0 top-0 select-none pointer-events-none "
               src={shadoimagetwo}
-              alt="landingimage"
+              alt="blur image blue"
             />
           </div>
         </div>
@@ -198,7 +168,11 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:gap-8 md:gap-4 gap-2 xl:mx-0 mx-2">
             {/* Team Member 1 */}
             <div className="relative p-2 lg:p-0">
-              <Image className="w-10 h-10" src={storyicon} alt="" />
+              <Image
+                className="w-10 h-10"
+                src={storyicon}
+                alt="real story icon"
+              />
               <h3 className="text-2xl sm:text-6xl font-nunito text-[#725ED4] sm:font-black font-extrabold mb-4">
                 Real stories.
                 <br />
@@ -217,14 +191,15 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-col justify-start items-start gap-3">
                 <a
-				  href="https://open.spotify.com/show/3CkgnjWzvuNeilZBOgOPqs?si=c833d254ee7c465b"
-				  target="_blank"
-				  rel="noopener noreferrer"
-				>
-				  <button className="bg-[#333333] text-white md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
-				    Listen on Spotify
-				  </button>
-				</a>
+                  href="https://open.spotify.com/show/3CkgnjWzvuNeilZBOgOPqs?si=c833d254ee7c465b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <button className="bg-[#333333] text-white md:w-[400px]  w-full sm:h-12 h-10 rounded-[30px]">
+                    Listen on Spotify
+                  </button>
+                </a>
                 <button className="border-[1px] border-[#333333] border-solid text-[#333333] md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
                   Apply to be on the show
                 </button>
@@ -232,7 +207,7 @@ export default function Home() {
               <Image
                 className="absolute top-[-150px] left-[-300px] select-none pointer-events-none"
                 src={shadoimage}
-                alt="landingimage"
+                alt="blur image blue"
               />
             </div>
 
@@ -244,11 +219,6 @@ export default function Home() {
                   src={safeSpace}
                   alt="safe space"
                 />
-                {/* <img
-                  src="../safespace.png"
-                  alt="safe space"
-                  className="w-full h-auto rounded-lg object-cover sm:mb-4 p-6"
-                /> */}
                 <div className="bg-[#DFD4F0] sm:w-[9px] w-[6px] h-[43px] rounded-[20px] absolute top-[50%] sm:left-3 left-0"></div>
                 <div className="bg-[#DFD4F0] sm:w-[9px] w-[6px] h-[90px] rounded-[20px] absolute sm:top-[47%] top-[45%] sm:left-0 left-2"></div>
                 <div className="bg-[#DFD4F0] sm:w-[9px] w-[6px] h-[47px] rounded-[20px] absolute top-1/2 sm:-left-3 left-4"></div>
@@ -330,13 +300,13 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 xl:mx-0 mx-2">
             <div>
-              <Image width="400" src={insta1} alt="" />
+              <Image width="400" src={insta1} alt="insagram story1" />
             </div>
             <div>
-              <Image width="400" src={insta2} alt="" />
+              <Image width="400" src={insta2} alt="instagram story2" />
             </div>
             <div>
-              <Image width="400" src={insta3} alt="" />
+              <Image width="400" src={insta3} alt="instagram story3" />
             </div>
           </div>
         </section>

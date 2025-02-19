@@ -45,7 +45,7 @@ export default function Home() {
                 </h1>
                 <p className="font-normal text-[16px] leading-[30px] sm:pt-0 pt-5">
                   Kuky is a supportive community designed to connect people on
-                  similar life journeys. As a Kuky Ambassador, you'll play a key
+                  similar life journeys. As a Kuky Ambassador, you&apos;ll play a key
                   role in spreading awareness, fostering connections, and making
                   a positive impact on mental health.
                 </p>
@@ -147,10 +147,10 @@ export default function Home() {
                         In which State? <span>*</span>
                       </h1>
                       <input
-	                      type="text"
-	                      className="border border-solid border-[#726E70] rounded-[15px] sm:h-[55px] h-12  w-full placeholder:text-[16px] placeholder:text-[#949494] indent-5"
-	                      placeholder="Enter State Name"
-	                    />
+                      type="text"
+                      className="border border-solid border-[#726E70] rounded-[15px] sm:h-[55px] h-12  w-full placeholder:text-[16px] placeholder:text-[#949494] indent-5"
+                      placeholder="type here"
+                    />
                     </div>
 
                     {/* school name */}
@@ -227,7 +227,7 @@ export default function Home() {
                 {/* how would you spread the word about Kuky? */}
                 <div className="sm:mt-10 mt-4">
                   <h1 className="sm:text-[24px] text-[20px] font-semibold mb-3">
-                    how would you spread the word about Kuky?
+                    How would you spread the word about Kuky?
                   </h1>
                   <textarea
                     name=""

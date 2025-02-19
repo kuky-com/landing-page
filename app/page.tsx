@@ -36,9 +36,9 @@ export default function Home() {
         <div className="w-full  mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
           <div className="main-block-title mt-10 relative sm:p-0 p-2">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto lg:px-0 md:px-6 px-2">
               <h2
-                className="lg:text-4xl text-2xl font-normal text-[#333333] leading-normal  mx-4 sm:mx-0 mb-4"
+                className="lg:text-4xl text-2xl font-normal text-[#333333] leading-normal mx-6  lg:mx-4 sm:mx-0 mb-4"
                 style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
               >
                 <span className="font-bold">Kuky</span> helps you find
@@ -46,7 +46,7 @@ export default function Home() {
               </h2>
 
               {/* youtube shorts video */}
-              <div className="flex flex-col md:flex-row mt-10 items-center justify-center lg:gap-2">
+              <div className="flex flex-col md:flex-row md:gap-0 gap-8 mt-10 items-center justify-center lg:gap-2">
                 <div className="relative sm:w-[38%] w-[100%] pb-[70%] bg-[#715ED4] rounded-2xl overflow-hidden">
                   <iframe
                     src="https://www.youtube.com/embed/9V658Z75Ly4"
@@ -115,7 +115,7 @@ export default function Home() {
 
         {/*section two */}
         <section className="w-full sm:py-16 py-8">
-          <div className="w-full max-w-6xl mx-auto text-center">
+          <div className="w-full max-w-6xl mx-auto text-center xl:p-0 p-4">
             <h2 className="md:text-5xl sm:text-3xl text-3xl font-black text-[#e6e6e6] font-nunito mb-8 sm:mb-16 mt-8">
               Why Kuky?
             </h2>
@@ -231,7 +231,7 @@ export default function Home() {
         </section>
 
         {/* section four blue page */}
-        <section className=" w-full bg-[#725ED4] md:h-[615px] sm:h-[500px] h-[350px] sm:p-16 p-5 relative">
+        <section className=" w-full bg-[#725ED4] xl:p-0 p-4 md:h-[615px] sm:h-[500px] h-[350px] sm:p-16 p-5 relative">
           <div className="max-w-[1300px]">
             <Image
               src={curve}

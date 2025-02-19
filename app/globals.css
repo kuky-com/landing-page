@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,10 +9,11 @@
 
 @font-face {
   font-family: "nunito";
-  src: url('/public/NunitoSans_7pt_Condensed-Black.ttf') format("ttf");
+  src: url("/public/NunitoSans_7pt_Condensed-Black.ttf") format("ttf");
 }
 
-html, body {
+html,
+body {
   font-family: "Lato", sans-serif;
 }
 
@@ -20,6 +21,34 @@ html, body {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+input[type="radio"] {
+  accent-color: #7b65e8; /* Change to any color */
+}
+
+/* Hide default radio button */
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7b65e8; /* Outer circle color */
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+/* Inner circle when checked */
+input[type="radio"]:checked::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #7b65e8; /* Inner circle color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,13 +78,13 @@ body {
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
 
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 
@@ -66,14 +95,30 @@ body {
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(0deg); }
-  50% { transform: rotate(-10deg); }
-  60% { transform: rotate(-5deg); }
-  70% { transform: rotate(0deg); }
-  80% { transform: rotate(5deg); }
-  90% { transform: rotate(10deg); }
-  100% { transform: rotate(5deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
 }
 
 .wiggle-animation {
@@ -83,7 +128,17 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  background: linear-gradient(to right, #e8c926, #fd7900, #f65a1d, #3855d9, #f7cc41, #f85e21, #3956da, #f7cc41);
+  background: linear-gradient(
+    to right,
+    #e8c926,
+    #fd7900,
+    #f65a1d,
+    #3855d9,
+    #f7cc41,
+    #f85e21,
+    #3956da,
+    #f7cc41
+  );
   animation: wave 2s ease-in-out forwards;
   background-size: 500% 100%;
   background-position-x: left;
@@ -95,5 +150,40 @@ body {
   }
   100% {
     background-position-x: left;
+  }
+}
+
+/* / header mobile view / */
+@media (max-width: 524px) {
+  .header-mobile {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .mobile-header {
+    position: relative;
+    border-bottom: 1px solid #725ed4;
+    padding-bottom: 15px;
+  }
+  .menu-button {
+    display: block;
+  }
+  .mobile-list {
+    position: absolute;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    padding: 15px;
+  }
+  .mobile-list a {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 100%;
   }
 }

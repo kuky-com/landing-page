@@ -11,8 +11,10 @@ import connection from "../../public/connection.png";
 import journey from "../../public/journey.png";
 import support from "../../public/support.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+	const router = useRouter();
   return (
     <div className="min-h-screen bg-[#FAFAFA] font-lato flex flex-col">
       <Header showAmbassadorBtn={true} />
@@ -53,12 +55,20 @@ export default function Home() {
                     journey. Inspire, and make a difference in your community.
                   </p>
                   <div className="lg:mt-10 mt-5 flex lg:flex-col md:flex-row flex-col font-comforta justify-start items-start gap-5">
-                    <button
+                  <a
+                  href="/program"
+                  target="_self"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <button
                       style={{ boxShadow: "0 4px 10px 0 #00000040" }}
                       className="bg-[#333333] text-[20px] font-bold text-white md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
                     >
                       Apply Now
                     </button>
+                </a>
+                    
                     <button className="border-[1px] border-[#F1F1F3] text-[18px] font-bold border-solid text-[#F1F1F3] md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]">
                       Learn more
                     </button>
@@ -88,12 +98,12 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h2 className="font-lato lg:text-[44px] sm:text-[30px] text-[24px] sm:leading-[60px] leading-[30px]  font-bold text-[#333333]  mb-3 sm:mt-8 mt-4">
+                <h2 className="font-lato lg:text-[44px] sm:text-[30px] text-[24px] xl:leading-[40px] sm:leading-[60px] leading-[30px]  font-bold text-[#333333]  mb-8 sm:mt-8 mt-4">
                   Why Join the Kuky Ambassador &nbsp;
                   <br className="xl:block hidden" />
                   Program?
                 </h2>
-                <ul className="font-comforta sl:mt-10 mt-4">
+                <ul className="font-comforta sl:mt-10 mt-6">
                   <li className="flex items-center sm:gap-5 gap-2 xl:my-4 sm:my-2 my-3">
                     <div className="bg-[#725ED4] rounded-[18px] flex justify-center items-center sm:min-w-12 min-w-10 sm:h-9 h-7">
                       <Image
@@ -229,7 +239,8 @@ export default function Home() {
           <div className="grid place-items-center mt-10 sm:mx-0 mx-2">
             <button
               style={{ boxShadow: "0 4px 10px 0 #00000040" }}
-              className="bg-[#333333] text-[20px] font-bold text-white md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
+              className="bg-[#333333] font-comforta text-[20px] font-bold text-white md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
+              onClick={() => router.push("/program")}
             >
               Apply Now
             </button>

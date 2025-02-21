@@ -27,19 +27,19 @@ export default function Home() {
     <div className="min-h-screen bg-[#FAFAFA] font-nunito flex flex-col">
       <Header showAmbassadorBtn={true} />
 
-      <main className="flex-grow flex flex-col justify-center items-center px-0 lg:px-0 mt-[92px]">
+      <main className="flex-grow flex flex-col justify-center items-center px-0 lg:px-0 md:mt-[92px] mt-[66px]">
         <div className="w-full  mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
           <div className="main-block-title mt-10 relative overflow-hidden md:p-0 sm:p-2 p-2">
             <div className="max-w-4xl mx-auto ">
               <div className="items-center flex justify-center">
                 <Image
-                  className="max-h-[100px] w-auto"
+                  className="sm:max-h-[100px] max-h-[80px] w-auto"
                   src={bettertogether}
                   alt="better together"
                 />
               </div>
-              <div className="grid sm:grid-cols-2 grid-cols-1 sm:py-16 items-center gap-5 pt-5 lg:px-0 px-2">
+              <div className="grid sm:grid-cols-2 grid-cols-1 sm:py-16 items-center gap-5 pt-5 xl:px-0 md:px-6 px-4">
                 <div className="md:text-start text-center relative">
                   <h2 className="lg:text-5xl text-4xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
                     About KUKY?
@@ -80,9 +80,9 @@ export default function Home() {
         </div>
 
         {/* section two */}
-        <section className="w-full sm:py-16 py-8 font-nunito">
+        <section className="w-full sm:py-16 py-8 font-nunito xl:px-0 md:px-6 px-4">
           <div className="w-full max-w-7xl mx-auto bg-[#725ED4] rounded-[10px]">
-            <div className="text-center pt-11 sm:pb-[80px] pb-10">
+            <div className="text-center pt-11 sm:pb-[80px] pb-10 xl:px-0 md:px-6 px-4">
               <div className="items-center justify-center w-full flex flex-row">
                 <Image
                   className="max-h-[66px] w-auto"
@@ -105,7 +105,7 @@ export default function Home() {
         </section>
 
         {/*section three */}
-        <section className="w-full sm:py-12 py-8 ">
+        <section className="w-full sm:py-12 py-8 xl:px-0 md:px-6 px-4">
           <div className="w-full max-w-6xl mx-auto text-center">
             <h2 className="md:text-5xl sm:text-3xl text-3xl font-black text-[#e6e6e6] font-nunito mb-8 sm:mb-16 mt-8">
               What We Stand For
@@ -116,10 +116,10 @@ export default function Home() {
                 title="Empathy First"
                 description={
                   <>
-                    We prioritize understanding and
-                    <br />
-                    supporting one another in every
-                    <br />
+                    We prioritize understanding and{" "}
+                    <br className="md:block hidden" />
+                    supporting one another in every{" "}
+                    <br className="md:block hidden" />
                     connection
                   </>
                 }
@@ -130,10 +130,10 @@ export default function Home() {
                 title="Privacy and Security"
                 description={
                   <>
-                    Our privacy is our top priority.
-                    <br />
-                    We ensure that all your
-                    <br />
+                    Our privacy is our top priority.{" "}
+                    <br className="md:block hidden" />
+                    We ensure that all your{" "}
+                    <br className="md:block hidden" />
                     interactions are safe and secure.
                   </>
                 }
@@ -144,10 +144,10 @@ export default function Home() {
                 title="Diversity & Inclusion"
                 description={
                   <>
-                    We welcome individuals from all
-                    <br />
-                    walks of life and strive to create a
-                    <br />
+                    We welcome individuals from all{" "}
+                    <br className="md:block hidden" />
+                    walks of life and strive to create a{" "}
+                    <br className="md:block hidden" />
                     space where everyone belongs.
                   </>
                 }
@@ -158,7 +158,7 @@ export default function Home() {
 
         {/* section four people behind kuky */}
 
-        <section className="w-full max-w-5xl mx-auto sm:py-24 py-10">
+        <section className="w-full max-w-5xl mx-auto sm:py-24 py-10 xl:px-0 md:px-6 px-4">
           <h2 className="md:text-5xl sm:text-3xl text-2xl text-center font-black text-[#e6e6e6] font-nunito mb-8 sm:mb-16">
             The People Behind Kuky
           </h2>

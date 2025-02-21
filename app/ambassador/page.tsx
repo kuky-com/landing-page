@@ -22,7 +22,7 @@ export default function Home() {
       <main className="flex-grow flex flex-col justify-center items-center px-0 lg:px-0 mt-[68px]">
         <div className="w-full  mx-auto flex flex-col gap-8 main-block ">
           {/* Title section at the top */}
-          <div className="main-block-title bg-[#725ED4] md:p-0 sm:p-2 p-0">
+          <div className="main-block-title bg-[#725ED4] xl:px-0 md:px-6 px-4">
             <div className="max-w-7xl mx-auto ">
               <div className="grid lg:grid-cols-2 grid-cols-1  items-center gap-5 pt-5 xl:px-0 px-2">
                 <div className="lg:mb-0 mb-8 pb-4">
@@ -69,9 +69,9 @@ export default function Home() {
                     </button>
                 </a>
                     
-                    <button className="border-[1px] border-[#F1F1F3] text-[18px] font-bold border-solid text-[#F1F1F3] md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]">
+                    {/* <button className="border-[1px] border-[#F1F1F3] text-[18px] font-bold border-solid text-[#F1F1F3] md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]">
                       Learn more
-                    </button>
+                    </button> */}
                   </div>
                 </div>
                 <div className="lg:mx-0 mx-auto">
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
 
         {/* section two ambasaddor program */}
-        <section className="w-full sm:py-16 py-8 font-nunito">
+        <section className="w-full sm:py-16 py-8 font-nunito xl:px-0 md:px-6 px-4">
           <div className="w-full max-w-7xl mx-auto rounded-[10px]">
             <div className="grid lg:grid-cols-2 grid-cols-1 lg:px-0 px-2 gap-8 items-center">
               <div className="">
@@ -150,12 +150,12 @@ export default function Home() {
         </section>
 
         {/*section three connection journey and support */}
-        <section className="w-full sm:py-12 py-8 ">
+        <section className="w-full sm:py-16 py-8 xl:px-0 md:px-6 px-4">
           <div className="w-full max-w-7xl mx-auto ">
             <div className="grid grid-cols-1 text-[#333333] lg:grid-cols-3 md:grid-cols-2 xl:px-0 lg:px-1 px-2 lg:gap-4 sm:gap-2 gap-0">
               {/* First Column */}
               <div className="bg-[#726F701A] rounded-[25px] sm:h-[630px] h-[350px]  relative md:mb-[100px] mb-[80px]">
-                <h1 className="text-center text-[#614BCE] font-black sm:text-[30px] text-[25px] sm:leading-[40px] leading-[30px] text-lato sm:pt-10 pt-6">
+                <h1 className="text-center text-[#614BCE] font-black sm:text-[22px] lg:text-[28px] text-[20px] sm:leading-[40px] leading-[30px] text-lato sm:pt-10 pt-6">
                   Heart left Connections <br className="" /> in Action
                 </h1>
                 <Image
@@ -194,7 +194,7 @@ export default function Home() {
 
         {/* section four how it work */}
 
-        <section className="w-full max-w-7xl mx-auto sm:py-15 py-5 sm:mb-[250px] mb-[100px]">
+        <section className="w-full max-w-7xl mx-auto sm:py-15 py-5 sm:mb-[250px] mb-[100px] xl:px-0 md:px-6 px-4">
           <div className="bg-[#F0F0F0] rounded-[20px] lg:mx-0 mx-2 md:py-5 sm:py-3 py-2 grid place-items-center sm:mb-10 mb-7">
             <h2 className="md:text-5xl sm:text-3xl text-2xl text-center font-bold text-[#725ED4] font-lato">
               How It Works

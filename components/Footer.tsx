@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
 
         {/* About Us, Terms & Conditions, Privacy Policy on the right */}
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 justify-center items-center text-sm">
-          <Link href="/">
+          <Link href="/contact-us">
             <div className="font-lato text-center text-[#333333] text-sm sm:text-md">
               Contact Us
             </div>

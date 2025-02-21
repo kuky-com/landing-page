@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
+import { ToastContainer } from "react-toastify";
 
 interface IProps {
   showAmbassadorBtn?: boolean;
@@ -50,7 +51,7 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
             </Link>
           )}
 
-          <Link href="/" passHref>
+          <Link href="https://app.kuky.com/" passHref>
             <div className="bg-gray-100 text-black font-light py-2 px-4 sm:px-10 lg:px-16 text-xs sm:text-sm lg:text-base rounded-full shadow-md hover:bg-gray-200">
               Sign up free
             </div>
@@ -93,7 +94,7 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
               </Link>
             )}
 
-            <Link href="/" passHref>
+            <Link href="https://app.kuky.com" passHref>
               <div className="bg-gray-100 text-black font-light py-2 px-6 text-sm rounded-full shadow-md hover:bg-gray-200">
                 Sign up free
               </div>

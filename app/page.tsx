@@ -20,6 +20,7 @@ import FAQ from "@/components/FAQ";
 import KukyInfo from "@/components/KukyInfo";
 import playstore from "../public/google-play.png";
 import appstore from "../public/apple-app-store.png";
+import InstagramFeed from "@/components/InstagramFeed";
 
 declare global {
   interface Window {
@@ -60,7 +61,7 @@ export default function Home() {
                 <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0">
                   <h1 className="lg:text-[44px] text-[40px] lg:leading-[55px] leading-[50px] font-black text-[#725ED4]">
                     Ready to Find
-                    <br className="sm:block hidden" />
+                    <br className="sm:block" />
                     Your Community?
                   </h1>
                   <p className="text-[#725ED4] lg:text-[30px] text-[25px] lg:leading-[45px] leading-[35px] font-medium pt-6">
@@ -115,7 +116,7 @@ export default function Home() {
 
         {/*section two */}
         <section className="w-full sm:py-16 py-8">
-          <div className="w-full max-w-6xl mx-auto text-center xl:p-0 p-4">
+          <div className="w-full max-w-6xl mx-auto text-center xl:px-0 md:px-6 px-4">
             <h2 className="md:text-5xl sm:text-3xl text-3xl font-black text-[#e6e6e6] font-nunito mb-8 sm:mb-16 mt-8">
               Why Kuky?
             </h2>
@@ -126,9 +127,9 @@ export default function Home() {
                 description={
                   <>
                     Our Advanced AI Understands
-                    <br /> your unique needs and find
-                    <br /> people who truly understand
-                    <br /> you.
+                    {" "}<br className="md:block hidden" /> your unique needs and find
+                    {" "}<br className="md:block hidden" /> people who truly understand
+                    {" "}<br className="md:block hidden" /> you.
                   </>
                 }
               />
@@ -139,9 +140,9 @@ export default function Home() {
                 description={
                   <>
                     Express yourself beyong text-
-                    <br /> show the real you in a
-                    <br /> 30-second video instead of
-                    <br /> filling out long forms!
+                    {" "}<br className="md:block hidden" /> show the real you in a
+                    {" "}<br className="md:block hidden" /> 30-second video instead of
+                    {" "}<br className="md:block hidden" /> filling out long forms!
                   </>
                 }
               />
@@ -152,9 +153,9 @@ export default function Home() {
                 description={
                   <>
                     Join diverse support groups and
-                    <br /> communities to connect with others
-                    <br /> who share your experiences and
-                    <br /> understand your journey.
+                    {" "}<br className="md:block hidden" /> communities to connect with others
+                    {" "}<br className="md:block hidden" /> who share your experiences and
+                    {" "}<br className="md:block hidden" /> understand your journey.
                   </>
                 }
               />
@@ -164,10 +165,10 @@ export default function Home() {
 
         {/* section three real stories */}
 
-        <section className="mx-auto sm:py-24 sm:py-12 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:gap-8 md:gap-4 gap-2 xl:mx-0 mx-2">
+        <section className="mx-auto sm:py-24 sm:py-12 py-8 xl:px-0 md:px-6 px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:gap-8 md:gap-4 gap-2 xl:mx-0 mx-2 px-2">
             {/* Team Member 1 */}
-            <div className="relative p-2 lg:p-0">
+            <div className="relative">
               <Image
                 className="w-10 h-10"
                 src={storyicon}
@@ -184,9 +185,9 @@ export default function Home() {
               </h3>
               <p className="text-[#333333] font-medium  text-lg sm:text-2xl">
                 Join us as we talk about personal growth, resileence, and
-                <br />
+                {" "}<br className="xl:block hidden" />
                 the power of human connection. Listen on your favourite
-                <br />
+                {" "}<br className="xl:block hidden" />
                 platform!
               </p>
               <div className="mt-8 flex flex-col justify-start items-start gap-3">
@@ -200,9 +201,15 @@ export default function Home() {
                     Listen on Spotify
                   </button>
                 </a>
-                <button className="border-[1px] border-[#333333] border-solid text-[#333333] md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
-                  Apply to be on the show
-                </button>
+                <a
+                  href="/contact-us"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <button className="border-[1px] border-[#333333] border-solid text-[#333333] md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
+                    Apply to be on the show
+                  </button>
+                </a>
               </div>
               <Image
                 className="absolute top-[-150px] left-[-300px] select-none pointer-events-none"
@@ -231,7 +238,7 @@ export default function Home() {
         </section>
 
         {/* section four blue page */}
-        <section className=" w-full bg-[#725ED4] xl:p-0 p-4 md:h-[615px] sm:h-[500px] h-[350px] sm:p-16 p-5 relative">
+        <section className=" w-full bg-[#725ED4] xl:p-0 p-4 md:h-[615px] sm:h-[500px] h-[350px] sm:p-16 p-5 relative xl:px-0 md:px-6 px-4">
           <div className="max-w-[1300px]">
             <Image
               src={curve}
@@ -294,12 +301,12 @@ export default function Home() {
         </section>
 
         {/* section five instagram post */}
-        <section className=" mx-auto sm:py-16 py-8">
+        <section className="w-full max-w-[1200px] mx-auto sm:py-16 py-8 xl:px-0 md:px-6 px-4">
           <h1 className="text-[#725ED4] font-black sm:text-4xl text-2xl text-center mb-10 mt-5">
             Share your #safeSpace
           </h1>
-          <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 xl:mx-0 mx-2">
-            <div>
+          {/* <div className=""> */}
+          {/* <div>
               <Image width="400" src={insta1} alt="insagram story1" />
             </div>
             <div>
@@ -307,12 +314,13 @@ export default function Home() {
             </div>
             <div>
               <Image width="400" src={insta3} alt="instagram story3" />
-            </div>
-          </div>
+            </div> */}
+          <InstagramFeed />
+          {/* </div> */}
         </section>
 
         {/* section six faq */}
-        <section className=" mx-auto md:py-16 sm:py-10 py-3">
+        <section className=" mx-auto md:py-16 sm:py-10 py-3 xl:px-0 md:px-6 px-4">
           <div>
             <FAQ />
           </div>

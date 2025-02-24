@@ -74,9 +74,11 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="w-full"
                     >
-                      <button className="border-[1px] border-[#F1F1F3] text-[18px] font-bold border-solid text-[#F1F1F3] lg:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
-                      hidden="hidden"
-                      >
+                     <button
+						  className="border-[1px] border-[#F1F1F3] text-[18px] font-bold border-solid text-[#F1F1F3] lg:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
+						  hidden
+						>
+
                         Learn more
                       </button>
                     </a>

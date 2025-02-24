@@ -108,7 +108,7 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] font-lato flex flex-col">
+    <div className="min-h-screen bg-[#FFF] font-lato flex flex-col">
       <Header showAmbassadorBtn={true} />
 
       <main className="flex-grow flex flex-col justify-center items-center px-0 lg:px-0 mt-[72px]">

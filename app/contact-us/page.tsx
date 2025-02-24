@@ -14,7 +14,7 @@ export default function ContactUs() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] font-lato flex flex-col">
+    <div className="min-h-screen bg-[#FFF] font-lato flex flex-col">
       <Header showAmbassadorBtn={true} />
 
       <main className="flex-grow flex flex-col justify-center items-center mt-[68px] xl:px-0 md:px-6 px-4">

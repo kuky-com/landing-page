@@ -109,7 +109,7 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
 
 const FAQ: React.FC = () => {
   return (
-    <section className="w-full max-w-[1200px] mx-auto my-8 sm:my-16 px-4">
+    <section className="w-full max-w-[1200px] mx-auto my-8 sm:my-16 sm:px-4 px-0">
       <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-16 text-center text-black">
         FAQ
       </h2>

@@ -30,25 +30,26 @@ declare global {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] font-nunito flex flex-col">
+    <div className="min-h-screen bg-[#FFF] font-nunito flex flex-col">
       <Header showAmbassadorBtn={true} />
 
       <main className="flex-grow flex flex-col justify-center items-center px-0 lg:px-0 mt-[92px]">
         <div className="w-full  mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
-          <div className="main-block-title mt-10 relative sm:p-0 p-2">
-            <div className="max-w-4xl mx-auto lg:px-0 md:px-6 px-2">
+          <div className="main-block-title sm:mt-10 mt-0 relative sm:p-0 p-2">
+            <div className="max-w-4xl mx-auto lg:px-0 md:px-6 px-2 lg:mt-[75px]">
               <h2
-                className="lg:text-4xl text-2xl font-normal text-[#333333] leading-normal mx-6  lg:mx-4 sm:mx-0 mb-4"
-                style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
+                className="lg:text-4xl text-2xl font-normal text-[#333333] leading-normal mx-3 lg:mx-4 sm:mx-0 mb-4"
+                // style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
               >
                 <span className="font-bold">Kuky</span> helps you find
-                meaningful connections <br /> through shared experiences.
+                meaningful connections <br className="md:block hidden" />{" "}
+                through shared experiences.
               </h2>
 
               {/* youtube shorts video */}
               <div className="flex flex-col md:flex-row md:gap-0 gap-8 mt-10 items-center justify-center lg:gap-2">
-                <div className="relative sm:w-[38%] w-[100%] pb-[70%] bg-[#715ED4] rounded-2xl overflow-hidden">
+                <div className="relative z-[1] sm:w-[38%] w-[100%] pb-[70%] bg-[#715ED4] rounded-2xl overflow-hidden">
                   <iframe
                     src="https://www.youtube.com/embed/9V658Z75Ly4"
                     title="YouTube kuky Shorts Video"
@@ -58,17 +59,17 @@ export default function Home() {
                   ></iframe>
                 </div>
 
-                <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0">
-                  <h1 className="lg:text-[44px] text-[40px] lg:leading-[55px] leading-[50px] font-black text-[#725ED4]">
-                    Ready to Find
-                    <br className="sm:block" />
+                <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0 relative z-[1]">
+                  <h1 className="lg:text-[44px] sm:text-[40px] text-[28px] lg:leading-[55px] sm:leading-[50px] leading-[40px] font-black text-[#725ED4]">
+                    Ready to Find&nbsp;
+                    <br className="sm:block hidden" />
                     Your Community?
                   </h1>
                   <p className="text-[#725ED4] lg:text-[30px] text-[25px] lg:leading-[45px] leading-[35px] font-medium pt-6">
-                    Download Kuky and
-                    <br />
-                    connect with Like-Minded
-                    <br />
+                    Download Kuky and&nbsp;
+                    <br className="md:block hidden" />
+                    connect with Like-Minded&nbsp;
+                    <br className="md:block hidden" />
                     Individuals
                   </p>
                   <div className="flex items-center lg:justify-start justify-center lg:flex-nowrap flex-wrap gap-3">
@@ -79,7 +80,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                     >
                       <Image
-                        className="bg-cover lg:w-[230px] w-[200px]  pt-8"
+                        className="bg-cover lg:w-[230px] w-[200px] pt-8"
                         src={appstore}
                         alt="apple app store"
                       />
@@ -91,7 +92,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                     >
                       <Image
-                        className="bg-cover  lg:w-[230px] w-[200px]  pt-8"
+                        className="bg-cover  lg:w-[230px] w-[200px] pt-8"
                         src={playstore}
                         alt="google play store"
                       />
@@ -126,10 +127,10 @@ export default function Home() {
                 title="Safe and Inclusive Community"
                 description={
                   <>
-                    Our Advanced AI Understands
-                    {" "}<br className="md:block hidden" /> your unique needs and find
-                    {" "}<br className="md:block hidden" /> people who truly understand
-                    {" "}<br className="md:block hidden" /> you.
+                    Our Advanced AI Understands{" "}
+                    <br className="md:block hidden" /> your unique needs and
+                    find <br className="md:block hidden" /> people who truly
+                    understand <br className="md:block hidden" /> you.
                   </>
                 }
               />
@@ -139,10 +140,11 @@ export default function Home() {
                 title="Video Sharing"
                 description={
                   <>
-                    Express yourself beyong text-
-                    {" "}<br className="md:block hidden" /> show the real you in a
-                    {" "}<br className="md:block hidden" /> 30-second video instead of
-                    {" "}<br className="md:block hidden" /> filling out long forms!
+                    Express yourself beyong text-{" "}
+                    <br className="md:block hidden" /> show the real you in a{" "}
+                    <br className="md:block hidden" /> 30-second video instead
+                    of <br className="md:block hidden" /> filling out long
+                    forms!
                   </>
                 }
               />
@@ -152,10 +154,11 @@ export default function Home() {
                 title="Personalized Matchmaking"
                 description={
                   <>
-                    Join diverse support groups and
-                    {" "}<br className="md:block hidden" /> communities to connect with others
-                    {" "}<br className="md:block hidden" /> who share your experiences and
-                    {" "}<br className="md:block hidden" /> understand your journey.
+                    Join diverse support groups and{" "}
+                    <br className="md:block hidden" /> communities to connect
+                    with others <br className="md:block hidden" /> who share
+                    your experiences and <br className="md:block hidden" />{" "}
+                    understand your journey.
                   </>
                 }
               />
@@ -166,9 +169,9 @@ export default function Home() {
         {/* section three real stories */}
 
         <section className="mx-auto sm:py-24 sm:py-12 py-8 xl:px-0 md:px-6 px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:gap-8 md:gap-4 gap-2 xl:mx-0 mx-2 px-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:gap-8 md:gap-4 gap-2 xl:mx-0 mx-0">
             {/* Team Member 1 */}
-            <div className="relative">
+            <div className="relative z-[10]">
               <Image
                 className="w-10 h-10"
                 src={storyicon}
@@ -184,10 +187,10 @@ export default function Home() {
                 redefined.
               </h3>
               <p className="text-[#333333] font-medium  text-lg sm:text-2xl">
-                Join us as we talk about personal growth, resileence, and
-                {" "}<br className="xl:block hidden" />
-                the power of human connection. Listen on your favourite
-                {" "}<br className="xl:block hidden" />
+                Join us as we talk about personal growth, resileence, and{" "}
+                <br className="xl:block hidden" />
+                the power of human connection. Listen on your favourite{" "}
+                <br className="xl:block hidden" />
                 platform!
               </p>
               <div className="mt-8 flex flex-col justify-start items-start gap-3">
@@ -212,7 +215,7 @@ export default function Home() {
                 </a>
               </div>
               <Image
-                className="absolute top-[-150px] left-[-300px] select-none pointer-events-none"
+                className="absolute z-[-1] top-[-150px] left-[-300px] select-none pointer-events-none"
                 src={shadoimage}
                 alt="blur image blue"
               />
@@ -327,7 +330,7 @@ export default function Home() {
         </section>
 
         {/* section seven play store */}
-        <section className="w-full mx-auto bg-[#725ED4] p-16 mb-12">
+        <section className="w-full mx-auto bg-[#725ED4] sm:p-16 p-8 mb-12">
           <h2 className="text-white text-3xl font-bold text-center mb-6">
             Ready to Find Your Community?
           </h2>

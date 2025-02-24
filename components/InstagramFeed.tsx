@@ -13,7 +13,7 @@ const InstagramFeed: React.FC = () => {
       <iframe
         src="//lightwidget.com/widgets/56e91f3eb2b253a491ca5794bf5865cb.html"
         scrolling="no"
-        allowTransparency={true}
+        // allowTransparency={true}
         className="lightwidget-widget w-full"
         style={{
           border: "0",

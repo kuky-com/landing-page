@@ -24,14 +24,14 @@ declare global {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] font-nunito flex flex-col">
+    <div className="min-h-screen bg-[#FFF] font-nunito flex flex-col">
       <Header showAmbassadorBtn={true} />
 
       <main className="flex-grow flex flex-col justify-center items-center px-0 lg:px-0 md:mt-[92px] mt-[66px]">
         <div className="w-full  mx-auto flex flex-col gap-8 main-block">
           {/* Title section at the top */}
-          <div className="main-block-title mt-10 relative overflow-hidden md:p-0 sm:p-2 p-2">
-            <div className="max-w-4xl mx-auto ">
+          <div className="main-block-title pt-10 relative overflow-hidden md:p-0 sm:p-2 p-2">
+            <div className="max-w-4xl mx-auto lg:mt-[80px]">
               <div className="items-center flex justify-center">
                 <Image
                   className="sm:max-h-[100px] max-h-[80px] w-auto"
@@ -39,25 +39,27 @@ export default function Home() {
                   alt="better together"
                 />
               </div>
-              <div className="grid sm:grid-cols-2 grid-cols-1 sm:py-16 items-center gap-5 pt-5 xl:px-0 md:px-6 px-4">
+              <div className="grid sm:grid-cols-2 grid-cols-1 sm:py-16 gap-5 pt-5 xl:px-0 md:px-6 px-4">
                 <div className="md:text-start text-center relative">
-                  <h2 className="lg:text-5xl text-4xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
+                  <h2 className="lg:text-[48px] text-[36px] font-black text-[#e6e6e6] font-nunito leading-[66px] mb-3 lg:mt-[79px] sm:mt-8 mt-4">
                     About KUKY?
                   </h2>
-                  <p className="text-medium lg:text-3xl md:text-2xl text-2xl text-[#333333] font-nunito ">
+                  <p className="text-medium lg:text-3xl md:text-2xl text-2xl text-[#333333] lg:leading-[50px] font-nunito ">
                     Discover the story behind
-                    <br /> <span className="font-extrabold">Kuky</span> and why
+                    <br className="md:block hidden" />{" "}
+                    <span className="font-extrabold">Kuky</span> and why
                     we&#39;re
-                    <br /> passionate about building a
-                    <br /> supportive community.
+                    <br className="md:block hidden" /> passionate about building
+                    a
+                    <br className="md:block hidden" /> supportive community.
                   </p>
                   <Image
-                    className="w-[150px] h-auto absolute -bottom-[150px] sm:block hidden right-0"
+                    className="w-[150px] h-auto absolute sm:block hidden right-0"
                     src={arrowblue}
                     alt="arrow blue"
                   />
                 </div>
-                <div className="sm:mx-0 mx-auto">
+                <div className="sm:mx-0 flex items-center justify-center mx-auto sm:mt-0 mt-4">
                   <Image
                     className="bg-cover object-fit max-h-[600px] w-auto"
                     src={about}
@@ -91,13 +93,13 @@ export default function Home() {
                 />
               </div>
 
-              <h2 className="lg:text-4xl text-3xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
+              <h2 className="lg:text-4xl text-2xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
                 The KUKY Journey
               </h2>
-              <p className="text-medium lg:text-2xl md:text-xl text-lg text-[#DFD4F0] font-nunito ">
+              <p className="text-medium sm:text-[22px] text-[19px] sm:leading-[45px] leading-[30px] text-[#DFD4F0] font-nunito ">
                 Kuky was created to foster deeper connections through shared
-                experiences,
-                <br />
+                experiences,&nbsp;
+                <br className="lg:block hidden" />
                 bringing together people who truly understand your journey.
               </p>
             </div>
@@ -107,7 +109,7 @@ export default function Home() {
         {/*section three */}
         <section className="w-full sm:py-12 py-8 xl:px-0 md:px-6 px-4">
           <div className="w-full max-w-6xl mx-auto text-center">
-            <h2 className="md:text-5xl sm:text-3xl text-3xl font-black text-[#e6e6e6] font-nunito mb-8 sm:mb-16 mt-8">
+            <h2 className="md:text-5xl sm:text-3xl text-2xl font-black text-[#e6e6e6] font-nunito mb-8 mb-8 sm:mb-16 sm:mt-8 mt-0">
               What We Stand For
             </h2>
             <div className="grid grid-cols-1 text-[#333333] lg:grid-cols-3 lg:px-0 px-2 lg:gap-3 sm:gap-2 gap-0">
@@ -132,8 +134,7 @@ export default function Home() {
                   <>
                     Our privacy is our top priority.{" "}
                     <br className="md:block hidden" />
-                    We ensure that all your{" "}
-                    <br className="md:block hidden" />
+                    We ensure that all your <br className="md:block hidden" />
                     interactions are safe and secure.
                   </>
                 }
@@ -232,7 +233,7 @@ export default function Home() {
         </section>
 
         {/* section five play store */}
-        <section className="w-full mx-auto bg-[#725ED4] p-16 mb-12">
+        <section className="w-full mx-auto bg-[#725ED4] sm:p-16 p-8 mb-12">
           <h2 className="text-white text-3xl font-bold text-center mb-6">
             Ready to Find Your Community?
           </h2>

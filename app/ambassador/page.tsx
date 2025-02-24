@@ -14,9 +14,9 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-	const router = useRouter();
+  const router = useRouter();
   return (
-    <div className="min-h-screen bg-[#FAFAFA] font-lato flex flex-col">
+    <div className="min-h-screen bg-[#FFF] font-lato flex flex-col">
       <Header showAmbassadorBtn={true} />
 
       <main className="flex-grow flex flex-col justify-center items-center px-0 lg:px-0 mt-[68px]">
@@ -25,19 +25,19 @@ export default function Home() {
           <div className="main-block-title bg-[#725ED4] xl:px-0 md:px-6 px-4">
             <div className="max-w-7xl mx-auto ">
               <div className="grid lg:grid-cols-2 grid-cols-1  items-center gap-5 pt-5 xl:px-0 px-2">
-                <div className="lg:mb-0 mb-8 pb-4">
+                <div className="lg:mb-0 mb-8 pb-4 p-5">
                   <div className="flex items-center gap-2 mb-5">
                     <Image
-                      className="bg-cover object-fit w-6 h-6"
+                      className="bg-cover object-fit w-5 h-5"
                       src={kukyicon}
                       alt="kuky logo"
                     />
-                    <h2 className="lg:text-2xl text-lg sm:font-semibold font-medium text-white">
+                    <h2 className="lg:text-xl text-lg sm:font-semibold font-medium text-white">
                       Kuky Ambassador Program
                     </h2>
                   </div>
                   <div className="">
-                    <h1 className="xl:text-5xl lg:text-4xl text-3xl  text-white mb-7">
+                    <h1 className="xl:text-[45px] lg:text-[32px] text-[26px] text-white mb-7">
                       Become a Kuky &nbsp;
                       <span className="relative">
                         Ambassador!
@@ -50,33 +50,41 @@ export default function Home() {
                     </h1>
                   </div>
 
-                  <p className="font-comforta sm:text-[24px] text-lg lg:leading-[40px] sm:leading-[30px] leading-[25px] font-normal">
+                  <p className="font-comforta text-white sm:text-[20px] xl:text-[22px] text-base lg:leading-[40px] sm:leading-[30px] leading-[25px] font-normal">
                     Join our mission to connect people on their mental health
                     journey. Inspire, and make a difference in your community.
                   </p>
                   <div className="lg:mt-10 mt-5 flex lg:flex-col md:flex-row flex-col font-comforta justify-start items-start gap-5">
-                  <a
-                  href="/program"
-                  target="_self"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <button
-                      style={{ boxShadow: "0 4px 10px 0 #00000040" }}
-                      className="bg-[#333333] text-[20px] font-bold text-white md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
+                    <a
+                      href="/program"
+                      target="_self"
+                      rel="noopener noreferrer"
+                      className="w-full"
                     >
-                      Apply Now
-                    </button>
-                </a>
-                    
-                    {/* <button className="border-[1px] border-[#F1F1F3] text-[18px] font-bold border-solid text-[#F1F1F3] md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]">
-                      Learn more
-                    </button> */}
+                      <button
+                        style={{ boxShadow: "0 4px 10px 0 #00000040" }}
+                        className="bg-[#333333] text-[20px] font-bold text-white md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
+                      >
+                        Apply Now
+                      </button>
+                    </a>
+                    <a
+                      href=""
+                      target="_self"
+                      rel="noopener noreferrer"
+                      className="w-full"
+                    >
+                      <button className="border-[1px] border-[#F1F1F3] text-[18px] font-bold border-solid text-[#F1F1F3] lg:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
+                      hidden="hidden"
+                      >
+                        Learn more
+                      </button>
+                    </a>
                   </div>
                 </div>
-                <div className="lg:mx-0 mx-auto">
+                <div className="lg:mx-0 mx-auto lg:pt-[63px]">
                   <Image
-                    className="bg-cover object-fit  w-auto"
+                    className="bg-cover object-fit w-auto"
                     src={ambasaddor_main}
                     alt="ambasaddor main"
                   />
@@ -89,7 +97,7 @@ export default function Home() {
         {/* section two ambasaddor program */}
         <section className="w-full sm:py-16 py-8 font-nunito xl:px-0 md:px-6 px-4">
           <div className="w-full max-w-7xl mx-auto rounded-[10px]">
-            <div className="grid lg:grid-cols-2 grid-cols-1 lg:px-0 px-2 gap-8 items-center">
+            <div className="grid lg:grid-cols-2 grid-cols-1 lg:px-0 px-0 gap-8 items-center">
               <div className="">
                 <Image
                   className=""

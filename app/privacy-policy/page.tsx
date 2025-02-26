@@ -101,7 +101,12 @@ export default function Home() {
 
                             <h3 className="text-black font-roboto text-base font-medium  text-left mb-2">Use and Disclosure</h3>
                             <p className="text-[#686868] mb-12 font-roboto text-base font-light  text-left leading-relaxed">
-                                We will only use or disclose your personal information for the purposes for which it was collected, unless you give us permission or the use or disclosure is required by law.
+                                The main reason we process your data is to provide our service to you and improve it over time. That includes connecting you with members who might make your heart skip a beat, personalizing your experience, and just helping you make the most of our service. We also process your data to keep you and all of our members safe and secure while using our service. We take this responsibility very seriously and we’re always working to improve our systems and processes to help protect you. And yes, we process your data to show relevant ads – you can control this in your settings. 
+
+                            </p>
+                            <p className="text-[#686868] mb-12 font-roboto text-base font-light  text-left leading-relaxed">
+                                Since our goal is to help you make meaningful connections, some of your information is of course visible to other members on the service. We also share data with service providers and partners who assist us in operating the service, in some cases, for legal and related reasons. 
+
                             </p>
 
                             <h3 className="text-black font-roboto text-base font-medium  text-left mb-2">Data Security</h3>

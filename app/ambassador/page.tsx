@@ -136,7 +136,7 @@ export default function Home() {
                       />
                     </div>
                     <p className="text-[#333333] font-semibold sm:text-[24px] sm:text-xl text-base sm:leading-[40px] leading-[20px]">
-                      Help spread awareness, organisze events, and connect
+                      Help spread awareness, organise events, and connect
                       people in their communities.
                     </p>
                   </li>
@@ -166,7 +166,7 @@ export default function Home() {
               {/* First Column */}
               <div className="bg-[#726F701A] rounded-[25px] sm:h-[630px] h-[350px]  relative md:mb-[100px] mb-[80px]">
                 <h1 className="text-center text-[#614BCE] font-black sm:text-[22px] lg:text-[28px] text-[20px] sm:leading-[40px] leading-[30px] text-lato sm:pt-10 pt-6">
-                  Heart left Connections <br className="" /> in Action
+                  Heartfelt Connections <br className="" /> in Action
                 </h1>
                 <Image
                   className="w-auto mx-auto sm:h-[623px] h-[350px]  absolute left-1/2 -translate-x-1/2 translate-y-0 sm:top-[122px] top-[70px]"

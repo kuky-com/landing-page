@@ -140,7 +140,7 @@ export default function Home() {
                 title="Video Sharing"
                 description={
                   <>
-                    Express yourself beyong text-{" "}
+                    Express yourself beyond text-{" "}
                     <br className="md:block hidden" /> show the real you in a{" "}
                     <br className="md:block hidden" /> 30-second video instead
                     of <br className="md:block hidden" /> filling out long
@@ -277,7 +277,7 @@ export default function Home() {
                 alt="profile3"
               />
               <p className="bg-[#E8FF58] rounded-full sm:mt-2 mt-1 text-[#725ED4] sm:text-sm text-[8px] py-[2px] px-2 inline-block">
-                Devorce Journey
+                Divorce Journey
               </p>
             </div>
             <div className="absolute md:top-[25%] sm:top-[20%] top-[14%] 2xl:right-[35%] xl:right-[25%] md:right-[22%] sm:right-[15%] right-[10%]">

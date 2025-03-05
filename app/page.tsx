@@ -240,6 +240,68 @@ export default function Home() {
           </div>
         </section>
 
+        {/* section four blue page */}
+        <section className=" w-full bg-[#725ED4] xl:p-0 p-4 md:h-[615px] sm:h-[500px] h-[350px] sm:p-16 p-5 relative xl:px-0 md:px-6 px-4">
+          <div className="max-w-[1300px]">
+            <Image
+              src={curve}
+              alt="Your experience can make a difference"
+              className="max-w-[1200px] w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            />
+
+            {/* profiles */}
+            <div className="absolute  bottom-[25%] 2xl:left-[20%] xl:left-[10%] left-3">
+              <Image
+                className="rounded-full sm:w-[60px] w-10 sm:h-[60px] h-10 border-[1px] border-white border-solid"
+                src={profile1}
+                alt="profile1"
+              />
+              <p className="bg-[#E8FF58] rounded-full sm:mt-2 mt-1 text-[#725ED4] sm:text-sm text-[8px] py-[2px] px-2 inline-block">
+                Grief support
+              </p>
+            </div>
+            <div className="absolute sm:top-[36%] top-[25%] 2xl:left-[35%] xl:left-[30%] left-[25%]">
+              <p className="bg-[#E8FF58] rounded-full sm:mb-2 mb-1 text-[#725ED4] sm:text-sm text-[8px] py-[2px] px-2 inline-block">
+                Empty Nesters
+              </p>
+              <Image
+                className="rounded-full sm:w-[50px] w-8 sm:h-[50px] h-8 border-[1px] border-white border-solid"
+                src={profile2}
+                alt="profile2"
+              />
+            </div>
+            <div className="absolute  bottom-[25%] sm:left-[50%] left-[45%]">
+              <Image
+                className="rounded-full sm:w-[60px] w-10 sm:h-[60px] h-10 border-[1px] border-white border-solid"
+                src={profile3}
+                alt="profile3"
+              />
+              <p className="bg-[#E8FF58] rounded-full sm:mt-2 mt-1 text-[#725ED4] sm:text-sm text-[8px] py-[2px] px-2 inline-block">
+                Devorce Journey
+              </p>
+            </div>
+            <div className="absolute md:top-[25%] sm:top-[20%] top-[14%] 2xl:right-[35%] xl:right-[25%] md:right-[22%] sm:right-[15%] right-[10%]">
+              <p className="bg-[#E8FF58] rounded-full sm:mb-2 mb-1 text-[#725ED4] sm:text-sm text-[8px] py-[2px] px-2 inline-block">
+                Addiction Recovery
+              </p>
+              <Image
+                className="rounded-full sm:w-[60px] w-10 sm:h-[60px] h-10 border-[1px] border-white border-solid"
+                src={profile4}
+                alt="profile4"
+              />
+            </div>
+            <div className="absolute bottom-[30%] 2xl:right-[20%] xl:right-[10%] sm:right-[10%] right-1">
+              <Image
+                className="rounded-full sm:w-[50px] w-[30px] sm:h-[50px] h-[30px] border-[1px] border-white border-solid"
+                src={profile5}
+                alt="profile5"
+              />
+              <p className="bg-[#E8FF58] rounded-full sm:mt-2 mt-1 text-[#725ED4] sm:text-sm text-[8px] py-[2px] px-2 inline-block">
+                Quitting Smoking
+              </p>
+            </div>
+          </div>
+        </section>
         
 
         {/* section five instagram post */}

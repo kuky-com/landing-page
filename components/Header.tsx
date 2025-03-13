@@ -70,7 +70,7 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
             </Link>
           )}
 
-          <Link href="https://app.kuky.com/" passHref>
+          <Link href="https://app.kuky.com/register" passHref>
             <div className="bg-gray-100 text-black font-semibold py-2 px-4 sm:px-10 lg:px-16 text-xs sm:text-sm lg:text-base rounded-full hover:bg-gray-200">
               Sign up for free
             </div>

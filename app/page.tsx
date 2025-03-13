@@ -187,7 +187,7 @@ export default function Home() {
                 redefined.
               </h3>
               <p className="text-[#333333] font-medium  text-lg sm:text-2xl">
-                Join us as we talk about personal growth, resileence, and{" "}
+                Join us as we talk about personal growth, resilience, and{" "}
                 <br className="xl:block hidden" />
                 the power of human connection. Listen on your favourite{" "}
                 <br className="xl:block hidden" />
@@ -277,7 +277,7 @@ export default function Home() {
                 alt="profile3"
               />
               <p className="bg-[#E8FF58] rounded-full sm:mt-2 mt-1 text-[#725ED4] sm:text-sm text-[8px] py-[2px] px-2 inline-block">
-                Devorce Journey
+                Divorce Journey
               </p>
             </div>
             <div className="absolute md:top-[25%] sm:top-[20%] top-[14%] 2xl:right-[35%] xl:right-[25%] md:right-[22%] sm:right-[15%] right-[10%]">

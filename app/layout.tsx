@@ -4,6 +4,7 @@ import { Metadata, Viewport } from 'next'
 import { Roboto, Inter } from "next/font/google";
 import Script from 'next/script'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+import GoogleTagManager from '../components/GoogleTagManager'
 import ToastProvider from "@/components/Common/ToastProvider";
 
 const roboto = Roboto({
@@ -70,7 +71,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleAnalytics />
-        
+        <GoogleTagManager  />
       </head>
       <body className={roboto.className}>
       

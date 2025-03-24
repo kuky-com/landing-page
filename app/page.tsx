@@ -61,18 +61,22 @@ export default function Home() {
 
                 <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0 relative z-[1]">
                   <h1 className="lg:text-[44px] sm:text-[40px] text-[28px] lg:leading-[55px] sm:leading-[50px] leading-[40px] font-black text-[#725ED4]">
-                    Ready to Find&nbsp;
+                    Discover a&nbsp;
                     <br className="sm:block hidden" />
-                    Your Community?
+                    supportive&nbsp;
+                    <br className="sm:block hidden" />
+                    community just&nbsp;
+                    <br className="sm:block hidden" />
+                    for <span className="text-black italic">YOU</span>
                   </h1>
                   <p className="text-[#725ED4] lg:text-[30px] text-[25px] lg:leading-[45px] leading-[35px] font-medium pt-6">
-                    Download Kuky and&nbsp;
+                    Connect with others on similar paths.&nbsp;
                     <br className="md:block hidden" />
-                    connect with Like-Minded&nbsp;
+                    Let’s make this journey easier,&nbsp;
                     <br className="md:block hidden" />
-                    Individuals
+                    together.
                   </p>
-                  <div className="flex items-center lg:justify-start justify-center lg:flex-nowrap flex-wrap gap-3">
+                  {/*<div className="flex items-center lg:justify-start justify-center lg:flex-nowrap flex-wrap gap-3">
                     <a
                       href="https://apps.apple.com/au/app/kuky/id6711341485"
                       className="flex items-center justify-center w-auto"
@@ -97,6 +101,18 @@ export default function Home() {
                         alt="google play store"
                       />
                     </a>
+                  </div>*/}
+                  <div className="mt-8 flex flex-col justify-start items-start gap-3">
+                  	<a
+	                  href="https://app.kuky.com/"
+	                  target="_blank"
+	                  rel="noopener noreferrer"
+	                  className="w-full"
+	                >
+	                  <button className="bg-[#333333] text-white md:w-[400px]  w-full sm:h-12 h-10 rounded-[30px]">
+	                    Explore the Community
+	                  </button>
+	                </a>
                   </div>
                 </div>
               </div>

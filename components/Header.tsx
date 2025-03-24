@@ -70,6 +70,14 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
             </Link>
           )}
 
+          <Link href="https://app.kuky.com/" passHref>
+            <div
+              className={`${bgColor} ${txtColor} font-semibold py-2 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base rounded-full hover:bg-gray-200 hover:text-black`}
+            >
+              Explore Communities
+            </div>
+          </Link>
+
           <Link href="https://app.kuky.com/register" passHref>
             <div className="bg-gray-100 text-black font-semibold py-2 px-4 sm:px-10 lg:px-16 text-xs sm:text-sm lg:text-base rounded-full hover:bg-gray-200">
               Sign up for free
@@ -116,6 +124,14 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
                 </div>
               </Link>
             )}
+
+            <Link href="https://app.kuky.com/"  className="sm:w-max w-full" passHref>
+            <div
+              className="bg-gray-100 text-black font-semibold py-2 text-center sm:px-6 px-4 text-sm rounded-full hover:bg-gray-200"
+            >
+              Explore Communities
+            </div>
+          </Link>
 
             <Link
               className="sm:w-max w-full"

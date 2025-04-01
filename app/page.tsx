@@ -76,44 +76,48 @@ export default function Home() {
                     <br className="md:block hidden" />
                     together.
                   </p>
-                  {/*<div className="flex items-center lg:justify-start justify-center lg:flex-nowrap flex-wrap gap-3">
-                    <a
-                      href="https://apps.apple.com/au/app/kuky/id6711341485"
-                      className="flex items-center justify-center w-auto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        className="bg-cover lg:w-[230px] w-[200px] pt-8"
-                        src={appstore}
-                        alt="apple app store"
-                      />
-                    </a>
-                    <a
-                      href="https://play.google.com/store/apps/details?id=com.kuky.android"
-                      className="flex items-center justify-center w-auto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        className="bg-cover  lg:w-[230px] w-[200px] pt-8"
-                        src={playstore}
-                        alt="google play store"
-                      />
-                    </a>
-                  </div>*/}
-                  <div className="mt-8 flex flex-col justify-start items-start gap-3">
-                  	<a
-	                  href="https://app.kuky.com/"
-	                  target="_blank"
-	                  rel="noopener noreferrer"
-	                  className="w-full"
-	                >
-	                  <button className="bg-[#333333] text-white md:w-[400px]  w-full sm:h-12 h-10 rounded-[30px]">
-	                    Explore the Community
-	                  </button>
-	                </a>
-                  </div>
+                  <div className="flex flex-col items-center lg:items-start gap-5 w-full md:w-[400px] pt-6">
+					  {/* App Store & Play Store Buttons */}
+					  <div className="flex items-center justify-center lg:justify-start flex-wrap lg:flex-nowrap gap-3 w-full">
+					    <a
+					      href="https://apps.apple.com/au/app/kuky/id6711341485"
+					      className="flex items-center justify-center w-auto"
+					      target="_blank"
+					      rel="noopener noreferrer"
+					    >
+					      <Image
+					        className="bg-cover w-[200px] lg:w-[230px]"
+					        src={appstore}
+					        alt="apple app store"
+					      />
+					    </a>
+					    <a
+					      href="https://play.google.com/store/apps/details?id=com.kuky.android"
+					      className="flex items-center justify-center w-auto"
+					      target="_blank"
+					      rel="noopener noreferrer"
+					    >
+					      <Image
+					        className="bg-cover w-[200px] lg:w-[230px]"
+					        src={playstore}
+					        alt="google play store"
+					      />
+					    </a>
+					  </div>
+
+					  {/* Explore the Community Button */}
+					  <a
+					    href="https://app.kuky.com/"
+					    target="_blank"
+					    rel="noopener noreferrer"
+					    className="w-full"
+					  >
+					    <button className="bg-[#333333] text-white w-full md:w-[400px] sm:h-12 h-10 rounded-[30px]">
+					      Explore the Community
+					    </button>
+					  </a>
+					</div>
+
                 </div>
               </div>
             </div>

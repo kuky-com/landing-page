@@ -13,6 +13,15 @@ const nextConfig = {
                 ],
             },
             {
+                source: '/.well-known/assetlinks.json',
+                headers: [
+                  {
+                    key: 'Content-Type',
+                    value: 'application/json',
+                  },
+                ],
+            },
+            {
                 source: '/:path*',
                 headers: [
                     {

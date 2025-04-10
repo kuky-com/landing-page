@@ -7,6 +7,17 @@ interface FAQItem {
 }
 
 const faqData: FAQItem[] = [
+	{
+   	question:"Why does Kuky ask for a video during sign-up?",
+   	answer:
+   		`We ask for a short video during sign-up to help keep our community safe, authentic, and free from fake accounts. Every profile is manually reviewed to ensure each member is a real person with genuine intentions — this helps us protect the integrity of our peer-to-peer space.
+
+		That said, we completely understand how being on video — especially on the spot — can feel overwhelming. You're definitely not alone in feeling that way, and we appreciate your courage in showing up. You can record your intro video as many times as you like until you’re happy with it. No pressure, no rush.
+
+		We're also actively exploring additional ways for people to express themselves beyond video while still keeping the same level of trust and connection within the community.
+
+		Your comfort and safety matter to us — thanks for being part of Kuky 💛`
+   },
   {
     question: "What is Kuky?",
     answer:
@@ -98,7 +109,11 @@ const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {
                   height={16}
                 />
               </div>
-              <p className="text-sm font-light sm:text-base">{item.answer}</p>
+              <div className="text-left text-sm font-light sm:text-base space-y-3">
+				  {item.answer.split('\n\n').map((paragraph, i) => (
+				    <p key={i}>{paragraph}</p>
+				  ))}
+				</div>
             </div>
           </div>
         )}

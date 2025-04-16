@@ -12,6 +12,7 @@ import journey from "../../public/journey.png";
 import support from "../../public/support.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import PrimaryButton from "@/components/Common/PrimaryButton";
 
 export default function Home() {
   const router = useRouter();
@@ -61,12 +62,10 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="w-full"
                     >
-                      <button
-                        style={{ boxShadow: "0 4px 10px 0 #00000040" }}
-                        className="bg-[#333333] text-[20px] font-bold text-white md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
-                      >
-                        Apply Now
-                      </button>
+                      < PrimaryButton
+                        text="Apply Now"
+                        onClick={() => router.push("/program")}
+                      />
                     </a>
                     <a
                       href=""
@@ -247,13 +246,10 @@ export default function Home() {
             </p>
           </div>
           <div className="grid place-items-center mt-10 sm:mx-0 mx-2">
-            <button
-              style={{ boxShadow: "0 4px 10px 0 #00000040" }}
-              className="bg-[#333333] font-comforta text-[20px] font-bold text-white md:w-[400px] w-full sm:h-14 h-12 rounded-[30px]"
+            < PrimaryButton
+              text="Apply Now"
               onClick={() => router.push("/program")}
-            >
-              Apply Now
-            </button>
+            />
           </div>
         </section>
       </main>

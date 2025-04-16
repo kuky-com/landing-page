@@ -21,6 +21,7 @@ import KukyInfo from "@/components/KukyInfo";
 import playstore from "../public/google-play.png";
 import appstore from "../public/apple-app-store.png";
 import InstagramFeed from "@/components/InstagramFeed";
+import PrimaryButton from "@/components/Common/PrimaryButton";
 
 declare global {
   interface Window {
@@ -112,9 +113,7 @@ export default function Home() {
 					    rel="noopener noreferrer"
 					    className="w-full"
 					  >
-					    <button className="bg-[#333333] text-white w-full md:w-[400px] sm:h-12 h-10 rounded-[30px]">
-					      Explore the Community
-					    </button>
+					    <PrimaryButton text="Explore the Community" />
 					  </a>
 					</div>
 
@@ -220,9 +219,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="w-full"
                 >
-                  <button className="bg-[#333333] text-white md:w-[400px]  w-full sm:h-12 h-10 rounded-[30px]">
-                    Listen on Spotify
-                  </button>
+                  <PrimaryButton text="Listen on Spotify" />
                 </a>
                 <a
                   href="/contact-us"

@@ -66,7 +66,7 @@ export default function Home() {
     }
 
     try {
-      // console.log("data>>", values);
+      console.log("data>>", values);
       // console.log("Selected schoolYear:", values.schoolYear);
 
       // Ensure optional fields default to empty strings if not provided

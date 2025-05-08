@@ -67,6 +67,8 @@ export default function Home() {
 
     try {
       console.log("data>>", values);
+      // console.log("Selected schoolYear:", values.schoolYear);
+
       // Ensure optional fields default to empty strings if not provided
       const ambassadorData = {
         ...values,
@@ -124,8 +126,8 @@ export default function Home() {
                 />
                 <h2 className="sm:text-[48px] text-center text-[24px] sm:font-semibold font-medium text-white sm:leading-[80px] leading-[40px]">
                   Kuky Ambassador Program
-                  <br />
-                  Fall 2025
+                  {/* <br />
+                  Fall 2025 */}
                 </h2>
                 {/* <h2 className="sm:text-[48px] text-[44px] sm:font-semibold font-medium text-white">
                   Fall 2025
@@ -198,13 +200,13 @@ export default function Home() {
                     >
                       <label
                         className="text-[16px] font-medium"
-                        htmlFor="freshman"
+                        htmlFor="school"
                       >
-                        Freshman
+                        School
                       </label>
                       <input
                         type="radio"
-                        value="Freshman" // The value that will be captured when this radio is selected
+                        value="School" // The value that will be captured when this radio is selected
                         {...register("schoolYear")} // Register this radio button with react-hook-form
                         className="text-[#7B65E8] border-[2px] border-solid rounded-full border-[#7B65E8] size-4 bg-white"
                       />
@@ -215,13 +217,13 @@ export default function Home() {
                     >
                       <label
                         className="text-[16px] font-medium"
-                        htmlFor="sophomore"
+                        htmlFor="college"
                       >
-                        Sophomore
+                        College
                       </label>
                       <input
                         type="radio"
-                        value="Sophomore" // The value that will be captured when this radio is selected
+                        value="College" // The value that will be captured when this radio is selected
                         {...register("schoolYear")} // Register this radio button with react-hook-form
                         className="text-[#7B65E8] border-[2px] border-solid rounded-full border-[#7B65E8] size-4 bg-white"
                       />
@@ -232,13 +234,13 @@ export default function Home() {
                     >
                       <label
                         className="text-[16px] font-medium"
-                        htmlFor="junior"
+                        htmlFor="university"
                       >
-                        Junior
+                        University
                       </label>
                       <input
                         type="radio"
-                        value="Junior" // The value that will be captured when this radio is selected
+                        value="University" // The value that will be captured when this radio is selected
                         {...register("schoolYear")} // Register this radio button with react-hook-form
                         className="text-[#7B65E8] border-[2px] border-solid rounded-full border-[#7B65E8] size-4 bg-white"
                       />
@@ -263,7 +265,7 @@ export default function Home() {
                   </div>
 
                   {/* year of school */}
-                  <div className="sm:mt-0 mt-4">
+                  {/* <div className="sm:mt-0 mt-4">
                     <h1 className="md:text-[24px] text-[20px] font-semibold mb-2">
                       What year are you in school?
                     </h1>
@@ -321,7 +323,7 @@ export default function Home() {
                         className="text-[#7B65E8] border-[2px] border-solid rounded-full border-[#7B65E8] size-4 bg-white"
                       />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 {/* why became ambassador */}
                 <div className="sm:mt-10 mt-4">

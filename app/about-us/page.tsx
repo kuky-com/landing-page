@@ -12,6 +12,8 @@ import people2 from "../people2.png";
 import people3 from "../people3.png";
 import people4 from "../people4.png";
 import people5 from "../people5.png";
+import people6 from "../people6.png";
+import people7 from "../people7.png";
 import arrowblue from "../arrow-blue.png";
 import bettertogether from "../bettertogether.png";
 import KukyInfo from "@/components/KukyInfo";
@@ -178,7 +180,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-span-2 relative overflow-hidden group">
-              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
+              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
                 <Image
                   className="bg-cover w-full"
                   src={people2}
@@ -226,6 +228,32 @@ export default function Home() {
               </div>
               <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
                 <h3 className="text-[18px] font-black mb-2">Tung Mai</h3>
+                <p className="text-base font-medium">Engineering</p>
+              </div>
+            </div>
+            <div className="col-span-2 relative overflow-hidden group">
+              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
+                <Image
+                  className="bg-cover w-full"
+                  src={people6}
+                  alt="people6"
+                />
+              </div>
+              <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
+                <h3 className="text-[18px] font-black mb-2">Kristijan Bugaric</h3>
+                <p className="text-base font-medium">Head of Growth Innovation</p>
+              </div>
+            </div>
+            <div className="col-span-2 relative overflow-hidden group">
+              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
+                <Image
+                  className="bg-cover w-full"
+                  src={people7}
+                  alt="people7"
+                />
+              </div>
+              <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
+                <h3 className="text-[18px] font-black mb-2">Dung Nguyen</h3>
                 <p className="text-base font-medium">Engineering</p>
               </div>
             </div>

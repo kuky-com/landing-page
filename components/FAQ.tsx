@@ -70,6 +70,12 @@ const faqData: FAQItem[] = [
     answer:
       "Kuky was created by experienced developers committed to fostering real human connections online. As part of our core values, we pledge transparency and integrity when handling user data. Additionally, we adhere strictly to industry best practices concerning data protection and follow guidelines established by organizations such as GDPR and CCPA. You can learn more about us here.",
   },
+  {
+    question:
+      "Can I change my Journey on Kuky?",
+    answer:
+      "Absolutely — life is all about change, and so is your Journey on Kuky. It's completely normal to grow, shift focus, or find yourself in a different headspace. To update your Journey, just head to your profile settings, choose your new Journey, and upload a fresh video. This helps Kuky continue to connect you with the right people who truly understand where you're at now.",
+  },
 ];
 
 const FAQItem: React.FC<{ item: FAQItem }> = ({ item }) => {

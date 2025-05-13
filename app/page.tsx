@@ -39,6 +39,7 @@ declare global {
 
 interface Match {
   id: number;
+  full_name: string;
   profile: {
     full_name: string;
     avatar: string;
@@ -46,6 +47,10 @@ interface Match {
   conversation_id: string;
   // Add more fields based on your API response
 }
+interface MatchResponse {
+  data: Match[];
+}
+
 
 export default function Home() {
   const [randomUsers, setRandomUsers] = useState<Match[]>([]);
@@ -70,8 +75,9 @@ export default function Home() {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const response = await get<Match[]>("/matches/random-by-journey");
-        setRandomUsers(response)
+        const response = await get<MatchResponse>("/matches/random-by-journey");
+        //console.log("Random Matches:", response);
+        setRandomUsers(response?.data)
       } catch (error) {
         console.error("Failed to fetch random matches", error);
       }
@@ -79,6 +85,7 @@ export default function Home() {
 
     fetchMatches();
   }, []);
+  //console.log('randomUsers', randomUsers);
   return (
     <div className="min-h-screen bg-[#FFF] font-nunito flex flex-col">
       <Header showAmbassadorBtn={true} />
@@ -318,7 +325,7 @@ export default function Home() {
               <div
                 className={` grid grid-cols-1 sm:grid-cols-2 md:grid md:grid-cols-3 sm:gap-6 gap-2 mt-4`}
               >
-                {randomUsers?.data?.map((story: Match) => (
+                {randomUsers?.map((story: Match) => (
                   <StoryCard key={story.id} story={story} />
                 ))}
               </div>

@@ -21,7 +21,7 @@ interface Story {
 }
 
 interface StoryCardProps {
-  story: Story;
+  story: Story; // corrected type
   variant?: "primary" | "secondary";
   column?: number;
   blurImage?: boolean;

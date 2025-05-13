@@ -129,6 +129,7 @@ const OnlineStatus: React.FC<{ status?: string; last_active_time?: string }> = (
         }}
       >
         {story.avatar ? (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={story.avatar}
             alt="User Avatar"

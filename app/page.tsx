@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Header from "../components/Header";
@@ -317,7 +318,7 @@ export default function Home() {
               <div
                 className={` grid grid-cols-1 sm:grid-cols-2 md:grid md:grid-cols-3 sm:gap-6 gap-2 mt-4`}
               >
-                {randomUsers?.data?.map((story) => (
+                {randomUsers?.data?.map((story: Match) => (
                   <StoryCard key={story.id} story={story} />
                 ))}
               </div>

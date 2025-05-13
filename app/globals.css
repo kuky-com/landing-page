@@ -187,9 +187,3 @@ body {
     width: 100%;
   }
 }
-.custom-paginations,
-.custom-paginationss {
-  width: 100% !important;
-  left: 50% !important;
-  bottom: -20px !important;
-}

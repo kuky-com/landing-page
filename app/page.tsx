@@ -199,35 +199,32 @@ export default function Home() {
               <h3 className="text-2xl sm:text-6xl font-nunito text-[#725ED4] sm:font-black font-extrabold mb-4">
                 Real stories.
                 <br />
-                Honest Conversations.
+                Genuine Connections.
                 <br />
-                Mental wellness.
-                <br />
-                redefined.
+                Discover people who share your journey.
               </h3>
               <p className="text-[#333333] font-medium  text-lg sm:text-2xl">
-                Join us as we talk about personal growth, resilience, and{" "}
+                Explore inspiring profiles and conversations about personal growth, resilience, and mental wellbeing.{" "}
                 <br className="xl:block hidden" />
-                the power of human connection. Listen on your favourite{" "}
-                <br className="xl:block hidden" />
-                platform!
+                Find others walking a similar path.{" "}
               </p>
               <div className="mt-8 flex flex-col justify-start items-start gap-3">
                 <a
-                  href="https://open.spotify.com/show/3CkgnjWzvuNeilZBOgOPqs?si=c833d254ee7c465b"
+                  href="https://app.kuky.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"
                 >
-                  <PrimaryButton text="Listen on Spotify" />
+                  <PrimaryButton text="Explore Users" />
                 </a>
                 <a
-                  href="/contact-us"
+                  href="https://app.kuky.com/signup"
+			target="_blank"
                   rel="noopener noreferrer"
                   className="w-full"
                 >
                   <button className="border-[1px] border-[#333333] border-solid text-[#333333] md:w-[400px] w-full sm:h-12 h-10 rounded-[30px]">
-                    Apply to be on the show
+                    Signup to Share Your Story
                   </button>
                 </a>
               </div>

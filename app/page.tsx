@@ -334,7 +334,7 @@ export default function Home() {
                   <li
                     className="font-medium sm:leading-[40px] leading-[25px] md:text-[20px] sm:text-lg text-sm text-[#333333]"
                   >
-                    Connect with others who understand what you're going through.
+                    Connect with others who understand what {`you'`}re going through.
                   </li>
                   <li
                     className="font-medium sm:leading-[40px] leading-[25px] md:text-[20px] sm:text-lg text-sm text-[#333333]"
@@ -353,7 +353,7 @@ export default function Home() {
                   </li>
               </ul>
                 </div>
-                            {/* mobile list slider */}
+           {/* mobile list slider */}
             <div className="md:hidden relative">
               <Swiper
                 spaceBetween={20}

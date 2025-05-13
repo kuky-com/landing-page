@@ -33,7 +33,8 @@ const StoryCard: React.FC<StoryCardProps> = ({
   column,
   blurImage
 }) => {
-  const router = useRouter();
+    const router = useRouter();
+    //console.log(story, "story");
   const handleClick = () => {
     if (story.referral_id) {
       router.push(`https://app.kuky.com/profile/${story.referral_id}`);
@@ -151,7 +152,7 @@ const OnlineStatus: React.FC<{ status?: string; last_active_time?: string }> = (
             <>
               <div className="text-white sm:text-[16px] text-[14px] font-semibold relative z-1 items-center sm:hidden">
                 <div className="items-center w-full">
-                  <span>{story.full_name} </span>
+                  <span>{story.full_name}{' '} </span>
                 </div>
                 <div className="flex justify-between items-center w-full">
                   {calculateAge(story.birthday) !== "N/A" && (
@@ -167,7 +168,7 @@ const OnlineStatus: React.FC<{ status?: string; last_active_time?: string }> = (
                 {story.full_name}
                 {calculateAge(story.birthday) !== "N/A"
                   ? `${calculateAge(story.birthday)} yo`
-                  : ""}
+                  : " "}
                 <OnlineStatus
                   status={story.online_status || ""}
                   last_active_time={story.last_active_time || ""}
@@ -176,10 +177,10 @@ const OnlineStatus: React.FC<{ status?: string; last_active_time?: string }> = (
             </>
           ) : (
             <div className="text-white sm:text-[16px] text-[14px] font-semibold relative z-1 flex items-center gap-2">
-              {story.full_name}
+              {story.full_name}{" "}
               {calculateAge(story.birthday) !== "N/A"
                 ? `${calculateAge(story.birthday)} yo`
-                : ""}
+                : " "}
               <OnlineStatus
                 status={story.online_status || ""}
                 last_active_time={story.last_active_time || ""}

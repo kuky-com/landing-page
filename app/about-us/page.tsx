@@ -166,32 +166,8 @@ export default function Home() {
             The People Behind Kuky
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:p-0 p-2">
-            <div className="col-span-2 lg:col-start-2 col-start-1 relative overflow-hidden group">
-              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
-                <Image
-                  className="bg-cover w-full"
-                  src={people1}
-                  alt="people1"
-                />
-              </div>
-              <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
-                <h3 className="text-[18px] font-black mb-2">Belinda Agnew</h3>
-                <p className="text-base font-medium">Community & Content</p>
-              </div>
-            </div>
-            <div className="col-span-2 relative overflow-hidden group">
-              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
-                <Image
-                  className="bg-cover w-full"
-                  src={people2}
-                  alt="people2"
-                />
-              </div>
-              <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
-                <h3 className="text-[18px] font-black mb-2">Sepideh Salimi</h3>
-                <p className="text-base font-medium">User Experience</p>
-              </div>
-            </div>
+            
+            
             <div className="col-span-2 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
                 <Image
@@ -255,6 +231,19 @@ export default function Home() {
               <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
                 <h3 className="text-[18px] font-black mb-2">Dung Nguyen</h3>
                 <p className="text-base font-medium">Engineering</p>
+              </div>
+            </div>
+            <div className="col-span-2 relative overflow-hidden group">
+              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
+                <Image
+                  className="bg-cover w-full"
+                  src={people2}
+                  alt="people2"
+                />
+              </div>
+              <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
+                <h3 className="text-[18px] font-black mb-2">Sepideh Salimi</h3>
+                <p className="text-base font-medium">User Experience</p>
               </div>
             </div>
           </div>

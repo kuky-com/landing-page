@@ -1,4 +1,4 @@
-const BASE_URL = "https://api.kuky.com/api/";
+const BASE_URL = "https://api.kuky.com/api";
 
 type RequestParams = Record<string, string | number | boolean | undefined>;
 

@@ -207,7 +207,7 @@ export default function Home() {
                 <p className="text-base font-medium">Engineering</p>
               </div>
             </div>
-            <div className="col-span-2 lg:col-start-2 col-start-1 relative overflow-hidden group">
+            <div className="col-span-2 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
                 <Image
                   className="bg-cover w-full"

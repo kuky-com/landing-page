@@ -22,6 +22,13 @@ import playstore from "../public/google-play.png";
 import appstore from "../public/apple-app-store.png";
 import InstagramFeed from "@/components/InstagramFeed";
 import PrimaryButton from "@/components/Common/PrimaryButton";
+import { useEffect, useState } from "react";
+import { get } from "../utils/api";
+import StoryCard from "@/components/StoryCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 declare global {
   interface Window {
@@ -29,7 +36,48 @@ declare global {
   }
 }
 
+interface Match {
+  id: number;
+  profile: {
+    full_name: string;
+    avatar: string;
+  };
+  conversation_id: string;
+  // Add more fields based on your API response
+}
+
 export default function Home() {
+  const [randomUsers, setRandomUsers] = useState<Match[]>([]);
+  const list = [
+    {
+        "name": "Connect with others who understand what you're going through.",
+        "id": 1
+    },
+    {
+        "name": "Share your story in a judgement-free space.",
+        "id": 2
+    },
+    {
+        "name": "Learn from personal experiences.",
+        "id": 3
+    },
+    {
+        "name": "Find support and motivation for your next chapter.",
+        "id": 4
+    }
+]
+  useEffect(() => {
+    const fetchMatches = async () => {
+      try {
+        const response = await get<Match[]>("/matches/random-by-journey");
+        setRandomUsers(response)
+      } catch (error) {
+        console.error("Failed to fetch random matches", error);
+      }
+    };
+
+    fetchMatches();
+  }, []);
   return (
     <div className="min-h-screen bg-[#FFF] font-nunito flex flex-col">
       <Header showAmbassadorBtn={true} />
@@ -187,7 +235,7 @@ export default function Home() {
 
         {/* section three real stories */}
 
-        <section className="mx-auto sm:py-24 sm:py-12 py-8 xl:px-0 md:px-6 px-4">
+        <section className="mx-auto sm:py-24 sm:py-12 py-8 xl:px-0 md:px-6 px-4" style={{display:'none'}}>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center lg:gap-8 md:gap-4 gap-2 xl:mx-0 mx-0">
             {/* Team Member 1 */}
             <div className="relative z-[10]">
@@ -253,6 +301,80 @@ export default function Home() {
                 <div className="bg-[#DFD4F0] sm:w-[9px] w-[6px] h-[126px] rounded-[20px] absolute top-[40%] sm:top-[45%] sm:right-5 right-2"></div>
                 <div className="bg-[#DFD4F0] sm:w-[9px] w-[6px] h-[58px] rounded-[20px] absolute top-1/2  sm:right-2 right-0"></div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full sm:py-16 py-8">
+          <div className="w-full max-w-6xl mx-auto text-center xl:px-0 md:px-6 px-4">
+            <div className="text-center ">
+            <>
+              <h2 className="md:text-4xl sm:text-2xl text-xl mb-7 text-[#333333] font-bold">
+                Real Stories from Real People
+              </h2>
+
+              {/* Desktop Grid */}
+              <div
+                className={` grid grid-cols-1 sm:grid-cols-2 md:grid md:grid-cols-3 sm:gap-6 gap-2 mt-4`}
+              >
+                {randomUsers?.data?.map((story) => (
+                  <StoryCard key={story.id} story={story} />
+                ))}
+              </div>
+            </>
+          {/* why join devorce journey */}
+          <div className="text-start sm:my-[60px] my-[80px]">
+            <h1 className="font-bold mb-3 md:text-2xl md:text-start text-center sm:text-xl text-lg text-[#333333]">
+              Real Stories from Real People
+            </h1>
+            <p className="font-bold text-[20px] mb-3 md:text-2xl md:text-start text-center sm:text-xl text-lg text-[#333333]"></p>
+            <div className="ml-7 md:block hidden">
+              <ul className="list-disc list-outside sm:mx-0 mx-2 mt-5">
+                  <li
+                    className="font-medium sm:leading-[40px] leading-[25px] md:text-[20px] sm:text-lg text-sm text-[#333333]"
+                  >
+                    Connect with others who understand what you're going through.
+                  </li>
+                  <li
+                    className="font-medium sm:leading-[40px] leading-[25px] md:text-[20px] sm:text-lg text-sm text-[#333333]"
+                  >
+                    Share your story in a judgement-free space.
+                  </li>
+                  <li
+                    className="font-medium sm:leading-[40px] leading-[25px] md:text-[20px] sm:text-lg text-sm text-[#333333]"
+                  >
+                    Learn from personal experiences.
+                  </li>
+                  <li
+                    className="font-medium sm:leading-[40px] leading-[25px] md:text-[20px] sm:text-lg text-sm text-[#333333]"
+                  >
+                    Find support and motivation for your next chapter.
+                  </li>
+              </ul>
+                </div>
+                            {/* mobile list slider */}
+            <div className="md:hidden relative">
+              <Swiper
+                spaceBetween={20}
+                slidesPerView={1}
+                pagination={{ clickable: true, el: ".custom-paginations" }}
+                modules={[Pagination]}
+                className="w-full"
+              >
+                    {list.map((item) => (
+                  <SwiperSlide
+                    key={item.id}
+                    className="rounded-[10px] relative overflow-hidden  bg-[#CDB8E266]/40"
+                  >
+                    <div className="h-[100px] grid place-items-center text-center rounded-[10px] py-4 px-[10px] font-medium sm:leading-[40px] leading-[18px] md:text-[20px] sm:text-lg text-[13px] text-[#333333]">
+                      {item.name}
+                    </div>
+                        </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className="custom-paginations absolute transform -translate-x-1/2 md:hidden w-full flex items-center justify-center gap-1"></div>
+            </div>
+          </div>
             </div>
           </div>
         </section>

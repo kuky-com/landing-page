@@ -108,7 +108,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row md:gap-0 gap-8 mt-10 items-center justify-center lg:gap-2">
                 <div className="relative z-[1] sm:w-[38%] w-[100%] pb-[70%] bg-[#715ED4] rounded-2xl overflow-hidden">
                   <iframe
-                    src="https://www.youtube.com/embed/9V658Z75Ly4"
+                    src="https://www.youtube.com/embed/4DbZiu_ajoI"
                     title="YouTube kuky Shorts Video"
                     className="absolute top-0 left-0 w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

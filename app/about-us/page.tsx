@@ -194,19 +194,7 @@ export default function Home() {
                 <p className="text-base font-medium">Product & Operations</p>
               </div>
             </div>
-            <div className="col-span-2 relative overflow-hidden group">
-              <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px]">
-                <Image
-                  className="bg-cover w-full"
-                  src={people5}
-                  alt="people5"
-                />
-              </div>
-              <div className="bg-[#725ED4] font-nunito rounded-[10px] text-center border border-solid border-[#725ED4] opacity-[0.90] text-white sm:p-2 p-1 absolute left-1/2 lg:-bottom-[-33p%] md:bottom-[-42%] sm:bottom-[-15%] bottom-[-33%] -translate-x-1/2 -translate-y-1/2 w-[90%] transition-all ease-out duration-500 group-hover:sm:bottom-[0%] group-hover:bottom-[-5%] hover:bg-[#433a70] cursor-pointer">
-                <h3 className="text-[18px] font-black mb-2">Tung Mai</h3>
-                <p className="text-base font-medium">Engineering</p>
-              </div>
-            </div>
+
             <div className="col-span-2 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
                 <Image
@@ -220,7 +208,7 @@ export default function Home() {
                 <p className="text-base font-medium">Head of Growth Innovation</p>
               </div>
             </div>
-            <div className="col-span-2 relative overflow-hidden group">
+            <div className="col-span-2 lg:col-start-2 col-start-1 relative overflow-hidden group">
               <div className="border border-solid border-[#725ED4] md:rounded-[12px] sm:rounded-[22px] rounded-[14px] overflow-hidden">
                 <Image
                   className="bg-cover w-full"

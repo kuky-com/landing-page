@@ -107,13 +107,21 @@ export default function Home() {
               {/* youtube shorts video */}
               <div className="flex flex-col md:flex-row md:gap-0 gap-8 mt-10 items-center justify-center lg:gap-2">
                 <div className="relative z-[1] sm:w-[38%] w-[100%] pb-[70%] bg-[#715ED4] rounded-2xl overflow-hidden">
-                  <iframe
-                    src="https://www.youtube.com/embed/4DbZiu_ajoI"
+                  {/* <iframe
+                    src="https://www.youtube.com/shorts/-fUOD4kMVs4?feature=share"
                     title="YouTube kuky Shorts Video"
                     className="absolute top-0 left-0 w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                  ></iframe>
+                  ></iframe> */}
+                  <iframe
+                    src="https://www.youtube.com/embed/-fUOD4kMVs4" 
+                    title="You don’t need to be fixed — just understood 💬"
+                    className="absolute top-0 left-0 w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  >
+                    </iframe>
                 </div>
 
                 <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0 relative z-[1]">

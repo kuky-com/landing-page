@@ -61,7 +61,7 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
             </div>
           </Link>
 
-          <Link href="https://app.kuky.com/register">
+          <Link href="https://app.kuky.com/signup">
             <div className="bg-gray-100 text-black font-semibold py-2 px-4 sm:px-10 lg:px-16 text-xs sm:text-sm lg:text-base rounded-full hover:bg-gray-200">
               Sign up for free
             </div>
@@ -102,7 +102,7 @@ const Header: React.FC<IProps> = ({ showAmbassadorBtn = false }) => {
               </div>
             </Link>
 
-            <Link className="sm:w-max w-full" href="https://app.kuky.com/register">
+            <Link className="sm:w-max w-full" href="https://app.kuky.com/signup">
               <div className="bg-gray-100 text-black font-semibold py-2 sm:px-6 px-4 text-sm text-center rounded-full hover:bg-gray-200">
                 Sign up for free
               </div>

@@ -23,10 +23,11 @@ import playstore from "../public/google-play.png";
 import appstore from "../public/apple-app-store.png";
 import InstagramFeed from "@/components/InstagramFeed";
 import PrimaryButton from "@/components/Common/PrimaryButton";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { get } from "../utils/api";
 import StoryCard from "@/components/StoryCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
@@ -53,6 +54,14 @@ interface MatchResponse {
 
 
 export default function Home() {
+  const swiperRef = useRef<any>(null);
+   useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.pagination.init();
+      swiperRef.current.swiper.pagination.render();
+      swiperRef.current.swiper.pagination.update();
+    }
+  }, []);
   const [randomUsers, setRandomUsers] = useState<Match[]>([]);
   const list = [
     {
@@ -106,23 +115,38 @@ export default function Home() {
 
               {/* youtube shorts video */}
               <div className="flex flex-col md:flex-row md:gap-0 gap-8 mt-10 items-center justify-center lg:gap-2">
-                <div className="relative z-[1] w-[100%] pb-[70%] bg-[#715ED4] rounded-2xl overflow-hidden">
-                  {/* <iframe
-                    src="https://www.youtube.com/shorts/-fUOD4kMVs4?feature=share"
-                    title="YouTube kuky Shorts Video"
-                    className="absolute top-0 left-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe> */}
-                  <iframe
-                    src="https://www.youtube.com/embed/-fUOD4kMVs4" 
-                    title="You don’t need to be fixed — just understood 💬"
-                    className="absolute top-0 left-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
+                <div className="relative z-[1] w-full h-[350px] sm:h-[600px]  rounded-2xl overflow-hidden">
+                  <Swiper
+                    modules={[Pagination]}
+                    pagination={{
+                      clickable: true,
+                      el: ".custom-video-pagination",
+                    }}
+                    className="absolute top-0 left-0 w-full h-[95%]"
                   >
-                    </iframe>
+                    <SwiperSlide>
+                      <iframe
+                        src="https://www.youtube.com/embed/tHMxHMQXQsw"
+                        title="Video 1"
+                        className="w-full h-full rounded-2xl"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <iframe
+                        src="https://www.youtube.com/embed/-fUOD4kMVs4"
+                        title="Video 2"
+                        className="w-full h-full rounded-2xl"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </SwiperSlide>
+                  </Swiper>
+                  <div className="custom-video-pagination flex justify-center mt-2"></div>
                 </div>
+
+                
 
                 <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0 relative z-[1]">
                   <h1 className="lg:text-[44px] sm:text-[40px] text-[28px] lg:leading-[55px] sm:leading-[50px] leading-[40px] font-black text-[#725ED4]">

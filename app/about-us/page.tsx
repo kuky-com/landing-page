@@ -95,7 +95,7 @@ export default function Home() {
                 />
               </div>
 
-              <h2 className="lg:text-4xl text-2xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
+              {/* <h2 className="lg:text-4xl text-2xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
                 The KUKY Journey
               </h2>
               <p className="text-medium sm:text-[22px] text-[19px] sm:leading-[45px] leading-[30px] text-[#DFD4F0] font-nunito ">
@@ -103,7 +103,30 @@ export default function Home() {
                 experiences,&nbsp;
                 <br className="lg:block hidden" />
                 bringing together people who truly understand your journey.
+              </p> */}
+              <h2 className="lg:text-4xl text-2xl font-black text-[#e6e6e6] font-nunito mb-3 sm:mt-8 mt-4">
+                The KUKY Journey
+              </h2>
+              <p className=" text-left text-medium sm:text-[22px] text-[19px] sm:leading-[30px] leading-[30px] text-[#DFD4F0] font-nunito p-8 custom-paragraph">
+                Kuky was born from a deeply personal moment in our founder Armin Nehzat’s life. While his wife was in her first trimester of pregnancy, filled with questions and anxiety. Simultaneously a close friend was dealing with heart complications, struggling with mental and emotional challenges. Despite being surrounded by supportive people, they both felt alone and unable to find the right support, at the right time, from someone who truly understood. 
+                <br />
+                <br/>
+                Doctors didn’t have the time. Friends didn’t have the right words. And professional help, while valuable, wasn’t always accessible or relatable in the moment.
+                That’s when Armin had an idea:
+                <br/>
+                <br />
+                <b className="custom-paragraph-text">What if people could connect instantly with others who had walked a similar path, someone who just “got it”?</b>
+                <br />
+                <br />
+                Kuky is a peer-to-peer support platform that connects people through shared experiences, real-time conversations, and mutual understanding. Whether you're dealing with anxiety, navigating grief, or just need someone to talk to, Kuky helps you find others who truly relate.
+                <br />
+                <br />
+                We believe emotional support doesn’t always need to come from professionals, 
+                <br />
+                <br />
+                it can come from people like you.
               </p>
+
             </div>
           </div>
         </section>

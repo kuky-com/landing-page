@@ -108,9 +108,10 @@ export default function Home() {
                 className="lg:text-4xl text-2xl font-normal text-[#333333] leading-normal mx-3 lg:mx-4 sm:mx-0 mb-4"
                 // style={{ textShadow: "0 4px 4px rgba(0, 0, 0, 0.25)" }}
               >
-                <span className="font-bold">Kuky</span> helps you find
+                {/* <span className="font-bold">Kuky</span> helps you find
                 meaningful connections <br className="md:block hidden" />{" "}
-                through shared experiences.
+                through shared experiences. */}
+                Connect with a Supportive Community Focused on Mental Wellness and Personal Growth.
               </h2>
 
               {/* youtube shorts video */}
@@ -150,16 +151,13 @@ export default function Home() {
 
                 <div className="mx-auto md:ml-8 md:mr-0 p-2 sm:p-0 relative z-[1]">
                   <h1 className="lg:text-[44px] sm:text-[40px] text-[28px] lg:leading-[55px] sm:leading-[50px] leading-[40px] font-black text-[#725ED4]">
-                    Discover a&nbsp;
+                    Real talk. &nbsp;
                     <br className="sm:block hidden" />
-                    supportive&nbsp;
+                    <span className="text-black italic">Real growth.</span>
                     <br className="sm:block hidden" />
-                    community just&nbsp;
-                    <br className="sm:block hidden" />
-                    for <span className="text-black italic">YOU</span>
                   </h1>
                   <p className="text-[#725ED4] lg:text-[30px] text-[25px] lg:leading-[45px] leading-[35px] font-medium pt-6">
-                    Connect with a Supportive Community Focused on Mental Wellness and Personal Growth.&nbsp;
+                    Kuky helps you find meaningful connections through shared experiences.&nbsp;
                     <br className="md:block hidden" />
                   </p>
                   <div className="flex flex-col items-center lg:items-start gap-5 w-full md:w-[400px] pt-6">

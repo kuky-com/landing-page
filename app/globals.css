@@ -193,3 +193,31 @@ body {
   left: 50% !important;
   bottom: -20px !important;
 }
+.custom-paragraph{
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: left;
+}
+.custom-paragraph-text{
+  font-size: 27px;
+  display: block;
+  float: left;
+  border-left: 7px solid;
+  padding-left: 30px;
+  margin-bottom: 70px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+@media screen and (max-width: 768px) {
+  .custom-paragraph-text {
+    font-size: 20px;
+    padding-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .custom-paragraph {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+}

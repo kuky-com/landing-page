@@ -118,7 +118,7 @@ export default function Home() {
                 <b className="custom-paragraph-text">What if people could connect instantly with others who had walked a similar path, someone who just “got it”?</b>
                 <br />
                 <br />
-                Kuky is a peer-to-peer support platform that connects people through shared experiences, real-time conversations, and mutual understanding. Whether you're dealing with anxiety, navigating grief, or just need someone to talk to, Kuky helps you find others who truly relate.
+                Kuky is a peer-to-peer support platform that connects people through shared experiences, real-time conversations, and mutual understanding. Whether you&#39;re dealing with anxiety, navigating grief, or just need someone to talk to, Kuky helps you find others who truly relate.
                 <br />
                 <br />
                 We believe emotional support doesn’t always need to come from professionals, 
